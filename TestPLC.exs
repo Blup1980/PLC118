@@ -1,0 +1,8 @@
+
+(* @GLOBAL_VARIABLE_LIST := TwinCAT_Import *)
+(* @PATH := '' *)
+VAR_GLOBAL (* DO NOT CHANGE THIS SHEET MANUALLY! *)
+END_VAR
+
+(* @OBJECT_END := TwinCAT_Import *)
+

@@ -1,0 +1,1798 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--This file is created by the TCatPlcCtrl automatically. Manually changes will be overwritten!-->
+<PlcProjectInfo xmlns:p="http://www.beckhoff.com/2002/01/TcPlcProjectDesc">
+	<ProjectInfo>
+		<Path>X:\42ndStreet\PLC\TestPLC.pro</Path>
+		<IsLibrary>false</IsLibrary>
+		<ChangeDate>2019-07-06T19:15:08</ChangeDate>
+		<Library>
+			<Name>STANDARD.LIB</Name>
+			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
+			<ChangeDate>1998-06-05T12:03:02</ChangeDate>
+		</Library>
+	</ProjectInfo>
+	<RoutingInfo>
+		<AdsInfo>
+			<NetId>192.168.1.169.1.1</NetId>
+			<Port>801</Port>
+			<TargetName>
+				<![CDATA[Système cible: CX_BECKHOFF (192.168.1.169.1.1), Exécution: 1]]>
+			</TargetName>
+		</AdsInfo>
+	</RoutingInfo>
+	<CompilerInfo>
+		<CpuFamily>StrongARM</CpuFamily>
+		<CompilerVersion>2.9.9.50</CompilerVersion>
+		<Alignment>Natural</Alignment>
+		<PackSize>4</PackSize>
+		<TwinCATVersion>2.11.0</TwinCATVersion>
+		<TCatPlcCtrlVersion>2.11.2618</TCatPlcCtrlVersion>
+	</CompilerInfo>
+	<TargetInfo>
+		<CpuFamily>StrongARM</CpuFamily>
+		<DataAreaInfo>
+			<DataSize>1048576</DataSize>
+			<RetainSize>32768</RetainSize>
+			<MAreaSize>32768</MAreaSize>
+			<InputSize>16384</InputSize>
+			<OutputSize>16384</OutputSize>
+			<MaxNumOfPOUs>2048</MaxNumOfPOUs>
+		</DataAreaInfo>
+	</TargetInfo>
+	<TaskInfos>
+		<TaskInfo>
+			<Name>Standard</Name>
+			<Priority>0</Priority>
+			<CycleTime>10</CycleTime>
+			<CycleTimeUs>10000</CycleTimeUs>
+			<Calls>
+				<ProgramCall>MAIN</ProgramCall>
+			</Calls>
+		</TaskInfo>
+	</TaskInfos>
+	<DirectoryInfos>
+		<DirectoryInfo>
+			<Type>LibraryDir</Type>
+			<Path>C:\TwinCAT\PLC\LIB\</Path>
+		</DirectoryInfo>
+		<DirectoryInfo>
+			<Type>CompileDir</Type>
+			<Path>C:\TwinCAT\PLC\</Path>
+		</DirectoryInfo>
+	</DirectoryInfos>
+	<DataTypes>
+		<DataType>
+			<Name Decoration="3000047F" Crc32="2475584784" LastChange="2019-07-06T09:52:08">E_SequenceItems</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>E_Red</Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_Green</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_Yellow</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_White</Text>
+				<Enum>3</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="10054CD8" Crc32="3500014943" LastChange="2019-07-06T09:51:54">FB_Debounce</Name>
+			<BitSize>480</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">fbTON</Name>
+				<Type Decoration="10060D24">TON</Type>
+				<BitSize>192</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">fbTOF</Name>
+				<Type Decoration="10060D24">TOF</Type>
+				<BitSize>192</BitSize>
+				<BitOffs>192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input">i_xBtn</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input">c_tDebounceTime</Name>
+				<Type>TIME</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">o_xDebounced</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>448</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>42</CodeIndex>
+				<InitIndex>43</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="20013907">ARRAY [1..8] OF E_SEQUENCEITEMS</Name>
+			<Type Decoration="3000047F">E_SequenceItems</Type>
+			<BitSize>128</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>8</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="100DB17B" Crc32="0265227760" LastChange="2019-07-06T09:51:54">FB_PlaySequence</Name>
+			<BitSize>512</BitSize>
+			<SubItem>
+				<Name>iSequencePointer</Name>
+				<Type>INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>iState</Name>
+				<Type>INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">ftTON</Name>
+				<Type Decoration="10060D24">TON</Type>
+				<BitSize>192</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>xTimerTrigger</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input">ieCorrectSequence</Name>
+				<Type Decoration="20013907">ARRAY [1..8] OF E_SEQUENCEITEMS</Type>
+				<BitSize>128</BitSize>
+				<BitOffs>240</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input">iiSequenceLength</Name>
+				<Type>INT</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>368</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input">itPeriodOn</Name>
+				<Type>TIME</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input">itPeriodOff</Name>
+				<Type>TIME</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxDone</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>448</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxRLed</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>456</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxGLed</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>464</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxYLed</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>472</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxWLed</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>480</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>44</CodeIndex>
+				<InitIndex>45</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="20010142">ARRAY [1..10] OF BOOL</Name>
+			<Type>BOOL</Type>
+			<BitSize>80</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>10</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="300003AB" Crc32="1319317223" LastChange="2019-07-06T09:52:08">E_SimonState</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>E_playing</Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_readUserInput</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_won</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="200142A6">ARRAY [0..7] OF STRING(20)</Name>
+			<Type Decoration="40000015">STRING(20)</Type>
+			<BitSize>1344</BitSize>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>8</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="10060AFD" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CTD</Name>
+			<BitSize>80</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">M</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Variable for CD Edge Detection]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CD</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Count Down on rising edge]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">LOAD</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Load Start Value]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">PV</Name>
+				<Type>WORD</Type>
+				<Comment>
+					<![CDATA[Start Value]]>
+				</Comment>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">Q</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Counter reached 0]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CV</Name>
+				<Type>WORD</Type>
+				<Comment>
+					<![CDATA[Current Counter Value]]>
+				</Comment>
+				<BitSize>16</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>8</CodeIndex>
+				<InitIndex>9</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="10060B75" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CTU</Name>
+			<BitSize>80</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">M</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Variable for CU Edge Detection]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CU</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Count Up]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">RESET</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Reset Counter to 0]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">PV</Name>
+				<Type>WORD</Type>
+				<Comment>
+					<![CDATA[Counter Limit]]>
+				</Comment>
+				<BitSize>16</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">Q</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Counter reached the Limit]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CV</Name>
+				<Type>WORD</Type>
+				<Comment>
+					<![CDATA[Current Counter Value]]>
+				</Comment>
+				<BitSize>16</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>10</CodeIndex>
+				<InitIndex>11</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="100A13D0" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CTUD</Name>
+			<BitSize>96</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">MU</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Variable for CU Edge Detection]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">MD</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Variable for CD Edge Detection]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CU</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Count Up]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CD</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Count Down]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>24</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">RESET</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Reset Counter to Null]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">LOAD</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Load Start Value]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>40</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">PV</Name>
+				<Type>WORD</Type>
+				<Comment>
+					<![CDATA[Start Value / Counter Limit]]>
+				</Comment>
+				<BitSize>16</BitSize>
+				<BitOffs>48</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">QU</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Counter reached Limit]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">QD</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Counter reached Null]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>72</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CV</Name>
+				<Type>WORD</Type>
+				<Comment>
+					<![CDATA[Current Counter Value]]>
+				</Comment>
+				<BitSize>16</BitSize>
+				<BitOffs>80</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>12</CodeIndex>
+				<InitIndex>13</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="1003051C" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">F_TRIG</Name>
+			<BitSize>24</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">M</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CLK</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Signal to detect]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">Q</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Edge detected]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>15</CodeIndex>
+				<InitIndex>16</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="1003051C" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">R_TRIG</Name>
+			<BitSize>24</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">M</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CLK</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Signal to detect]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">Q</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Edge detected]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>22</CodeIndex>
+				<InitIndex>23</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="100306C8" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">RS</Name>
+			<BitSize>24</BitSize>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">SET</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">RESET1</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">Q1</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>26</CodeIndex>
+				<InitIndex>27</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="100409DC" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">SEMA</Name>
+			<BitSize>32</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">X</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CLAIM</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">RELEASE</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">BUSY</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>24</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>28</CodeIndex>
+				<InitIndex>29</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="100306C6" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">SR</Name>
+			<BitSize>24</BitSize>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">SET1</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">RESET</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>8</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">Q1</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>16</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>30</CodeIndex>
+				<InitIndex>31</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="10060D24" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">TOF</Name>
+			<BitSize>192</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">M</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[internal variable]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">StartTime</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[internal variable]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">IN</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[starts timer with falling edge, resets timer with rising edge]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">PT</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[time to pass, before Q is set]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">Q</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[is FALSE, PT seconds after IN had a falling edge]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">ET</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[elapsed time]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>160</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>32</CodeIndex>
+				<InitIndex>33</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="10060D24" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">TON</Name>
+			<BitSize>192</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">M</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[internal variable]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">StartTime</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[internal variable]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">IN</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[starts timer with rising edge, resets timer with falling edge]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">PT</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[time to pass, before Q is set]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">Q</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[is TRUE, PT seconds after IN had a rising edge]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">ET</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[elapsed time]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>160</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>34</CodeIndex>
+				<InitIndex>35</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="10050B9B" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">TP</Name>
+			<BitSize>160</BitSize>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">StartTime</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[internal variable]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">IN</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[Trigger for Start of the Signal]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">PT</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[The length of the High-Signal in 10ms]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">Q</Name>
+				<Type>BOOL</Type>
+				<Comment>
+					<![CDATA[The pulse]]>
+				</Comment>
+				<BitSize>8</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">ET</Name>
+				<Type>TIME</Type>
+				<Comment>
+					<![CDATA[The current phase of the High-Signal]]>
+				</Comment>
+				<BitSize>32</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>36</CodeIndex>
+				<InitIndex>37</InitIndex>
+			</FbInfo>
+		</DataType>
+	</DataTypes>
+	<Functions>
+		<Function>
+			<Name Decoration="100CD937" Crc32="2986945085" LastChange="2019-07-06T09:51:54">F_UserPlayIsValid</Name>
+			<FunInfo>
+				<CodeIndex>39</CodeIndex>
+				<ReturnValue>
+					<Name>F_UserPlayIsValid</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name>xRedPressedAlone</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name>xGreenPressedAlone</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name>xYellowPressedAlone</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name>xWhitePressedAlone</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name>ePlayedItem</Name>
+					<Type Decoration="3000047F">E_SequenceItems</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input">aeCorrectSequence</Name>
+					<Type Decoration="20013907">ARRAY [1..8] OF E_SEQUENCEITEMS</Type>
+					<BitSize>128</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input">iPlayedSequenceIndex</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input">xRedBtn</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input">xGreenBtn</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input">xYellowBtn</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input">xWhiteBtn</Name>
+					<Type>BOOL</Type>
+					<BitSize>8</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="1003CF58" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CONCAT</Name>
+			<FunInfo>
+				<CodeIndex>7</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CONCAT</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR1</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR2</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="10048DE1" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">DELETE</Name>
+			<FunInfo>
+				<CodeIndex>14</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">DELETE</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">LEN</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">POS</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="10038BEA" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">FIND</Name>
+			<FunInfo>
+				<CodeIndex>17</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">FIND</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR1</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR2</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="1004D151" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">INSERT</Name>
+			<FunInfo>
+				<CodeIndex>18</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">INSERT</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR1</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR2</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">POS</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="10038BD5" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">LEFT</Name>
+			<FunInfo>
+				<CodeIndex>19</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">LEFT</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">SIZE</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="10024688" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">LEN</Name>
+			<FunInfo>
+				<CodeIndex>20</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">LEN</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="10048D08" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">MID</Name>
+			<FunInfo>
+				<CodeIndex>21</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">MID</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">LEN</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">POS</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="1005D217" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">REPLACE</Name>
+			<FunInfo>
+				<CodeIndex>24</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">REPLACE</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR1</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR2</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">L</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">P</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+		<Function>
+			<Name Decoration="10038C28" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">RIGHT</Name>
+			<FunInfo>
+				<CodeIndex>25</CodeIndex>
+				<ReturnValue>
+					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">RIGHT</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</ReturnValue>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">STR</Name>
+					<Type Decoration="40000100">STRING(255)</Type>
+					<BitSize>2048</BitSize>
+				</FunParameter>
+				<FunParameter>
+					<Name FunParameter="Input" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">SIZE</Name>
+					<Type>INT</Type>
+					<BitSize>16</BitSize>
+				</FunParameter>
+			</FunInfo>
+		</Function>
+	</Functions>
+	<Programs>
+		<Program>
+			<Name Decoration="10000000" Crc32="0023081930" LastChange="2019-07-06T09:51:54">MAIN</Name>
+			<PrgInfo>
+				<CodeIndex>46</CodeIndex>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="10023420" Crc32="2503703290" LastChange="2019-07-06T19:15:04">P_CircuitBrakers</Name>
+			<PrgInfo>
+				<CodeIndex>47</CodeIndex>
+				<Symbol>
+					<Name>P_CircuitBrakers.c_aeCorrectSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_CircuitBrakers.c_iCorrectSequenceLength</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="10000000" Crc32="3995381838" LastChange="2019-07-06T19:09:30">P_Helmets</Name>
+			<PrgInfo>
+				<CodeIndex>48</CodeIndex>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="10203B2B" Crc32="3196533582" LastChange="2019-07-06T18:38:21">P_Simon</Name>
+			<PrgInfo>
+				<CodeIndex>49</CodeIndex>
+				<Symbol>
+					<Name>P_Simon.c_aeCorrectSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.c_iCorrectSequenceLength</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.c_tDebounceTime</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.c_tPlayerTimeoutTime</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.c_tLightOnPeriod</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.c_tLightOffPeriod</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.eSimonState</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.aeResultLeds</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.iShownSequenceIndex</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.iPlayedSequenceIndex</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.xPlayedSequenceDone</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.xRaisingEdgeRedBtn</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.xRaisingEdgeGreenBtn</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.xRaisingEdgeYellowBtn</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.xRaisingEdgeWhiteBtn</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.fbDebounceRed</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.fbDebounceGreen</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.fbDebounceYellow</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.fbDebounceWhite</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.fbRisingTrigRedBtn</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.fbRisingTrigGreenBtn</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.fbRisingTrigYellowBtn</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.fbRisingTrigWhiteBtn</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.fbTimeoutTimer</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.xTimeoutTimerTrigger</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.xPlayerTimeoutOccured</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.xDebouncedRedBtn</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.xDebouncedGreenBtn</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.xDebouncedYellowBtn</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.xDebouncedWhiteBtn</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.counter</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.fbSequencePlayer</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+	</Programs>
+	<Symbols>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_aeCorrectSequence</Name>
+			<Type Decoration="20013907">ARRAY [1..8] OF E_SEQUENCEITEMS</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>26</IOffset>
+			<BitSize>128</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_iCorrectSequenceLength</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>42</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_tDebounceTime</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>44</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_tPlayerTimeoutTime</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>48</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_tLightOnPeriod</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>52</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_tLightOffPeriod</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>56</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.eSimonState</Name>
+			<Type Decoration="300003AB">E_SimonState</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>60</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.aeResultLeds</Name>
+			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>62</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.iShownSequenceIndex</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>72</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.iPlayedSequenceIndex</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>74</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xPlayedSequenceDone</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>76</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xRaisingEdgeRedBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>77</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xRaisingEdgeGreenBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>78</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xRaisingEdgeYellowBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>79</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xRaisingEdgeWhiteBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>80</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbDebounceRed</Name>
+			<Type Decoration="10054CD8">FB_Debounce</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>84</IOffset>
+			<BitSize>480</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbDebounceGreen</Name>
+			<Type Decoration="10054CD8">FB_Debounce</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>144</IOffset>
+			<BitSize>480</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbDebounceYellow</Name>
+			<Type Decoration="10054CD8">FB_Debounce</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>204</IOffset>
+			<BitSize>480</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbDebounceWhite</Name>
+			<Type Decoration="10054CD8">FB_Debounce</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>264</IOffset>
+			<BitSize>480</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbRisingTrigRedBtn</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>81</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbRisingTrigGreenBtn</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>324</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbRisingTrigYellowBtn</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>327</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbRisingTrigWhiteBtn</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>330</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbTimeoutTimer</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>336</IOffset>
+			<BitSize>192</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xTimeoutTimerTrigger</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>333</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xPlayerTimeoutOccured</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>334</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xDebouncedRedBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>335</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xDebouncedGreenBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>360</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xDebouncedYellowBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>361</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xDebouncedWhiteBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>362</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.counter</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>364</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbSequencePlayer</Name>
+			<Type Decoration="100DB17B">FB_PlaySequence</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>368</IOffset>
+			<BitSize>512</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.g_xRecoveryMode</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>889</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.gat_xBrakerSolved</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>846</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xBraker1</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">128</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xBraker2</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">129</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xBraker3</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">130</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xBraker4</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">131</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xBraker5</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">132</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xBraker6</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">133</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xBraker7</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">134</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xBraker8</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">135</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.gat_xHelmetsSolved</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>865</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xHelmet1ID</Name>
+			<Type>UDINT</Type>
+			<IGroup>61472</IGroup>
+			<IOffset VarConfig="Changeable">8</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xHelmet2ID</Name>
+			<Type>UDINT</Type>
+			<IGroup>61472</IGroup>
+			<IOffset VarConfig="Changeable">12</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.gat_xKeysSolved</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>866</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xKey1</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">138</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xKey2</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">139</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.gat_xSimonSolved</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>877</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xRedLamp</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">34</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xGreenLamp</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">35</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xYellowLamp</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">36</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xWhiteLamp</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">37</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output">.gatq_xRedBtnLamp</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">38</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output">.gatq_xGreenBtnLamp</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">39</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output">.gatq_xYellowBtnLamp</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">40</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output">.gatq_xWhiteBtnLamp</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">41</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed1</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">42</IOffset>
+			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 12 (EL2008)^Channel 1^Output]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed2</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">43</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed3</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">44</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed4</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">45</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed5</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">46</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed6</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">47</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed7</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">48</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed8</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">49</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed9</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">50</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed10</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">51</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output">.gatq_xRelay</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">64</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">.gati_xRedButton</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">32</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">.gati_xGreenButton</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">33</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">.gati_xYellowButton</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">34</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">.gati_xWhiteButton</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">35</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.gat_xValveSolved</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>878</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xValve1</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">140</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xValve2</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">141</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xValve3</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">142</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xValve4</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">143</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xValve5</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">144</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xValve6</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">145</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xValve7</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">146</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xValve8</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">147</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xValve9</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">148</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">.gati_xValve10</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">149</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+	</Symbols>
+	<VarConfigs/>
+</PlcProjectInfo>
