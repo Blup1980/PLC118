@@ -4,7 +4,7 @@
 	<ProjectInfo>
 		<Path>C:\Users\xavie\Documents\PLC118\TestPLC.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2019-07-07T23:44:17</ChangeDate>
+		<ChangeDate>2019-07-11T22:01:25</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -13,10 +13,10 @@
 	</ProjectInfo>
 	<RoutingInfo>
 		<AdsInfo>
-			<NetId>192.168.1.169.1.1</NetId>
+			<NetId>192.168.1.201.1.1</NetId>
 			<Port>801</Port>
 			<TargetName>
-				<![CDATA[Système cible: CX_BECKHOFF (192.168.1.169.1.1), Exécution: 1]]>
+				<![CDATA[Système cible: CX_118 (192.168.1.201.1.1), Exécution: 1]]>
 			</TargetName>
 		</AdsInfo>
 	</RoutingInfo>
@@ -62,7 +62,7 @@
 	</DirectoryInfos>
 	<DataTypes>
 		<DataType>
-			<Name Decoration="3000047F" Crc32="2475584784" LastChange="2019-07-07T23:44:17">E_SequenceItems</Name>
+			<Name Decoration="3000047F" Crc32="2475584784" LastChange="2019-07-11T22:00:15">E_SequenceItems</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -83,7 +83,7 @@
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="10054CD8" Crc32="3500014943" LastChange="2019-07-07T23:44:17">FB_Debounce</Name>
+			<Name Decoration="10054CD8" Crc32="3500014943" LastChange="2019-07-11T22:00:15">FB_Debounce</Name>
 			<BitSize>480</BitSize>
 			<SubItem>
 				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">fbTON</Name>
@@ -130,7 +130,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100DB17B" Crc32="0265227760" LastChange="2019-07-07T23:44:17">FB_PlaySequence</Name>
+			<Name Decoration="100DB17B" Crc32="0265227760" LastChange="2019-07-11T22:00:15">FB_PlaySequence</Name>
 			<BitSize>512</BitSize>
 			<SubItem>
 				<Name>iSequencePointer</Name>
@@ -216,6 +216,39 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
+			<Name Decoration="3000049F" Crc32="1334834885" LastChange="2019-07-11T22:00:15">E_SimonWonState</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>E_showNothing</Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_showDigit1</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_wait1</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_showDigit2</Text>
+				<Enum>3</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_wait2</Text>
+				<Enum>4</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_showDigit3</Text>
+				<Enum>5</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_wait3</Text>
+				<Enum>6</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
 			<Name Decoration="20010142">ARRAY [1..10] OF BOOL</Name>
 			<Type>BOOL</Type>
 			<BitSize>80</BitSize>
@@ -225,7 +258,117 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="300003AB" Crc32="1319317223" LastChange="2019-07-07T23:44:17">E_SimonState</Name>
+			<Name Decoration="10110122" Crc32="2053374012" LastChange="2019-07-11T22:01:18">FB_Simon_PlayWon</Name>
+			<BitSize>608</BitSize>
+			<SubItem>
+				<Name>eSimonWonState</Name>
+				<Type Decoration="3000049F">E_SimonWonState</Type>
+				<BitSize>16</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">ftTON</Name>
+				<Type Decoration="10060D24">TON</Type>
+				<BitSize>192</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name>xTimerTrigger</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input">ixFinalCode1</Name>
+				<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+				<BitSize>80</BitSize>
+				<BitOffs>232</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input">ixFinalCode2</Name>
+				<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+				<BitSize>80</BitSize>
+				<BitOffs>312</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input">ixFinalCode3</Name>
+				<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+				<BitSize>80</BitSize>
+				<BitOffs>392</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input">itPeriod</Name>
+				<Type>TIME</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>480</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxLED1</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>512</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxLED2</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>520</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxLED3</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>528</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxLED4</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>536</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxLED5</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>544</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxLED6</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>552</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxLED7</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>560</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxLED8</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>568</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxLED9</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>576</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">oxLED10</Name>
+				<Type>BOOL</Type>
+				<BitSize>8</BitSize>
+				<BitOffs>584</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>97</CodeIndex>
+				<InitIndex>98</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="300003AB" Crc32="1319317223" LastChange="2019-07-11T22:00:15">E_SimonState</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -800,7 +943,7 @@
 	</DataTypes>
 	<Functions>
 		<Function>
-			<Name Decoration="100CD937" Crc32="2986945085" LastChange="2019-07-07T23:44:17">F_UserPlayIsValid</Name>
+			<Name Decoration="100CD937" Crc32="2986945085" LastChange="2019-07-11T22:00:15">F_UserPlayIsValid</Name>
 			<FunInfo>
 				<CodeIndex>39</CodeIndex>
 				<ReturnValue>
@@ -1077,13 +1220,13 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="10000000" Crc32="1672275221" LastChange="2019-07-07T23:44:17">MAIN</Name>
+			<Name Decoration="10000000" Crc32="1672275221" LastChange="2019-07-11T22:00:15">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>46</CodeIndex>
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10023420" Crc32="2503703290" LastChange="2019-07-07T23:44:17">P_CircuitBrakers</Name>
+			<Name Decoration="10023420" Crc32="2503703290" LastChange="2019-07-11T22:00:15">P_CircuitBrakers</Name>
 			<PrgInfo>
 				<CodeIndex>47</CodeIndex>
 				<Symbol>
@@ -1095,13 +1238,13 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10000000" Crc32="3995381838" LastChange="2019-07-07T23:44:17">P_Helmets</Name>
+			<Name Decoration="10000000" Crc32="3995381838" LastChange="2019-07-11T22:00:15">P_Helmets</Name>
 			<PrgInfo>
 				<CodeIndex>48</CodeIndex>
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10203B2B" Crc32="3196533582" LastChange="2019-07-07T23:44:17">P_Simon</Name>
+			<Name Decoration="1025D9F5" Crc32="1651347062" LastChange="2019-07-11T22:00:15">P_Simon</Name>
 			<PrgInfo>
 				<CodeIndex>49</CodeIndex>
 				<Symbol>
@@ -1121,6 +1264,18 @@
 				</Symbol>
 				<Symbol>
 					<Name>P_Simon.c_tLightOffPeriod</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.c_axFinalCode1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.c_axFinalCode2</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.c_axFinalCode3</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Simon.c_tLightWonPeriod</Name>
 				</Symbol>
 				<Symbol>
 					<Name>P_Simon.eSimonState</Name>
@@ -1200,6 +1355,9 @@
 				<Symbol>
 					<Name>P_Simon.fbSequencePlayer</Name>
 				</Symbol>
+				<Symbol>
+					<Name>P_Simon.fbPlayWon</Name>
+				</Symbol>
 			</PrgInfo>
 		</Program>
 	</Programs>
@@ -1258,6 +1416,34 @@
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>56</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_axFinalCode1</Name>
+			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>867</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_axFinalCode2</Name>
+			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>879</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_axFinalCode3</Name>
+			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>890</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_tLightWonPeriod</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>900</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
@@ -1441,6 +1627,13 @@
 			<IGroup>16448</IGroup>
 			<IOffset>368</IOffset>
 			<BitSize>512</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbPlayWon</Name>
+			<Type Decoration="10110122">FB_Simon_PlayWon</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>904</IOffset>
+			<BitSize>608</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">.g_xRecoveryMode</Name>
@@ -1686,7 +1879,7 @@
 			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name Static="Output">.gatq_xRedBtnLamp</Name>
+			<Name Static="Output" TaskPrio="1">.gatq_xRedBtnLamp</Name>
 			<Type>BOOL</Type>
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">38</IOffset>
@@ -1701,7 +1894,7 @@
 			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name Static="Output">.gatq_xGreenBtnLamp</Name>
+			<Name Static="Output" TaskPrio="1">.gatq_xGreenBtnLamp</Name>
 			<Type>BOOL</Type>
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">39</IOffset>
@@ -1716,7 +1909,7 @@
 			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name Static="Output">.gatq_xYellowBtnLamp</Name>
+			<Name Static="Output" TaskPrio="1">.gatq_xYellowBtnLamp</Name>
 			<Type>BOOL</Type>
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">40</IOffset>
@@ -1731,7 +1924,7 @@
 			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name Static="Output">.gatq_xWhiteBtnLamp</Name>
+			<Name Static="Output" TaskPrio="1">.gatq_xWhiteBtnLamp</Name>
 			<Type>BOOL</Type>
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">41</IOffset>
