@@ -2,13 +2,13 @@
 <!--This file is created by the TCatPlcCtrl automatically. Manually changes will be overwritten!-->
 <PlcProjectInfo xmlns:p="http://www.beckhoff.com/2002/01/TcPlcProjectDesc">
 	<ProjectInfo>
-		<Path>X:\42ndStreet\PLC\TestPLC.pro</Path>
+		<Path>C:\Users\xavie\Documents\PLC118\TestPLC.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2019-07-06T19:15:08</ChangeDate>
+		<ChangeDate>2019-07-07T23:44:17</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
-			<ChangeDate>1998-06-05T12:03:02</ChangeDate>
+			<ChangeDate>1998-06-05T11:03:02</ChangeDate>
 		</Library>
 	</ProjectInfo>
 	<RoutingInfo>
@@ -62,7 +62,7 @@
 	</DirectoryInfos>
 	<DataTypes>
 		<DataType>
-			<Name Decoration="3000047F" Crc32="2475584784" LastChange="2019-07-06T09:52:08">E_SequenceItems</Name>
+			<Name Decoration="3000047F" Crc32="2475584784" LastChange="2019-07-07T23:44:17">E_SequenceItems</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -83,7 +83,7 @@
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="10054CD8" Crc32="3500014943" LastChange="2019-07-06T09:51:54">FB_Debounce</Name>
+			<Name Decoration="10054CD8" Crc32="3500014943" LastChange="2019-07-07T23:44:17">FB_Debounce</Name>
 			<BitSize>480</BitSize>
 			<SubItem>
 				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">fbTON</Name>
@@ -130,7 +130,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100DB17B" Crc32="0265227760" LastChange="2019-07-06T09:51:54">FB_PlaySequence</Name>
+			<Name Decoration="100DB17B" Crc32="0265227760" LastChange="2019-07-07T23:44:17">FB_PlaySequence</Name>
 			<BitSize>512</BitSize>
 			<SubItem>
 				<Name>iSequencePointer</Name>
@@ -225,7 +225,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="300003AB" Crc32="1319317223" LastChange="2019-07-06T09:52:08">E_SimonState</Name>
+			<Name Decoration="300003AB" Crc32="1319317223" LastChange="2019-07-07T23:44:17">E_SimonState</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -800,7 +800,7 @@
 	</DataTypes>
 	<Functions>
 		<Function>
-			<Name Decoration="100CD937" Crc32="2986945085" LastChange="2019-07-06T09:51:54">F_UserPlayIsValid</Name>
+			<Name Decoration="100CD937" Crc32="2986945085" LastChange="2019-07-07T23:44:17">F_UserPlayIsValid</Name>
 			<FunInfo>
 				<CodeIndex>39</CodeIndex>
 				<ReturnValue>
@@ -1077,13 +1077,13 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="10000000" Crc32="0023081930" LastChange="2019-07-06T09:51:54">MAIN</Name>
+			<Name Decoration="10000000" Crc32="1672275221" LastChange="2019-07-07T23:44:17">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>46</CodeIndex>
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10023420" Crc32="2503703290" LastChange="2019-07-06T19:15:04">P_CircuitBrakers</Name>
+			<Name Decoration="10023420" Crc32="2503703290" LastChange="2019-07-07T23:44:17">P_CircuitBrakers</Name>
 			<PrgInfo>
 				<CodeIndex>47</CodeIndex>
 				<Symbol>
@@ -1095,13 +1095,13 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10000000" Crc32="3995381838" LastChange="2019-07-06T19:09:30">P_Helmets</Name>
+			<Name Decoration="10000000" Crc32="3995381838" LastChange="2019-07-07T23:44:17">P_Helmets</Name>
 			<PrgInfo>
 				<CodeIndex>48</CodeIndex>
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10203B2B" Crc32="3196533582" LastChange="2019-07-06T18:38:21">P_Simon</Name>
+			<Name Decoration="10203B2B" Crc32="3196533582" LastChange="2019-07-07T23:44:17">P_Simon</Name>
 			<PrgInfo>
 				<CodeIndex>49</CodeIndex>
 				<Symbol>
@@ -1204,6 +1204,20 @@
 		</Program>
 	</Programs>
 	<Symbols>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_CircuitBrakers.c_aeCorrectSequence</Name>
+			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>14</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1">P_CircuitBrakers.c_iCorrectSequenceLength</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>24</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">P_Simon.c_aeCorrectSequence</Name>
 			<Type Decoration="20013907">ARRAY [1..8] OF E_SEQUENCEITEMS</Type>
@@ -1436,67 +1450,131 @@
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name>.gat_xBrakerSolved</Name>
+			<Name TaskPrio="1">.gat_xBrakerSolved</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>846</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">.gati_xBraker1</Name>
+			<Name Static="Input" TaskPrio="1">.gati_xBraker1</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">128</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 5^Stotz1]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">.gati_xBraker2</Name>
+			<Name Static="Input" TaskPrio="1">.gati_xBraker2</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">129</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 6^Stotk2]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">.gati_xBraker3</Name>
+			<Name Static="Input" TaskPrio="1">.gati_xBraker3</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">130</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 7^Stotz3]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">.gati_xBraker4</Name>
+			<Name Static="Input" TaskPrio="1">.gati_xBraker4</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">131</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 8^Stotz4]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">.gati_xBraker5</Name>
+			<Name Static="Input" TaskPrio="1">.gati_xBraker5</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">132</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 9^Stotz5]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">.gati_xBraker6</Name>
+			<Name Static="Input" TaskPrio="1">.gati_xBraker6</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">133</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 10^Stotz6]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">.gati_xBraker7</Name>
+			<Name Static="Input" TaskPrio="1">.gati_xBraker7</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">134</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 11^Stotz7]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">.gati_xBraker8</Name>
+			<Name Static="Input" TaskPrio="1">.gati_xBraker8</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">135</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 12^Stotz8]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name>.gat_xHelmetsSolved</Name>
@@ -1553,6 +1631,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">34</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 13 (EL2008)^Channel 8^SimonLedR]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output" TaskPrio="1">.gatq_xGreenLamp</Name>
@@ -1560,6 +1646,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">35</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 14 (EL2024)^Channel 1^SimonLedG]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output" TaskPrio="1">.gatq_xYellowLamp</Name>
@@ -1567,6 +1661,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">36</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 14 (EL2024)^Channel 2^SimonLedY]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output" TaskPrio="1">.gatq_xWhiteLamp</Name>
@@ -1574,6 +1676,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">37</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 13 (EL2008)^Channel 7^SimonLedW]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output">.gatq_xRedBtnLamp</Name>
@@ -1581,6 +1691,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">38</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 13 (EL2008)^Channel 5^SimonBtnLedR]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output">.gatq_xGreenBtnLamp</Name>
@@ -1588,6 +1706,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">39</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 13 (EL2008)^Channel 3^SimonBtnLedG]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output">.gatq_xYellowBtnLamp</Name>
@@ -1595,6 +1721,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">40</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 13 (EL2008)^Channel 6^SimonBtnLedY]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output">.gatq_xWhiteBtnLamp</Name>
@@ -1602,6 +1736,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">41</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 13 (EL2008)^Channel 4^SimonBtnLedW]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed1</Name>
@@ -1613,7 +1755,7 @@
 				<Property>
 					<Name>LinkedWith</Name>
 					<Value>
-						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 12 (EL2008)^Channel 1^Output]]>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 12 (EL2008)^Channel 1^SimonL1]]>
 					</Value>
 				</Property>
 			</Properties>
@@ -1624,6 +1766,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">43</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 12 (EL2008)^Channel 2^SimonL2]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed3</Name>
@@ -1631,6 +1781,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">44</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 12 (EL2008)^Channel 3^SimonL3]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed4</Name>
@@ -1638,6 +1796,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">45</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 12 (EL2008)^Channel 4^SImonL4]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed5</Name>
@@ -1645,6 +1811,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">46</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 12 (EL2008)^Channel 5^SImonL5]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed6</Name>
@@ -1652,6 +1826,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">47</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 12 (EL2008)^Channel 6^SImonL6]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed7</Name>
@@ -1659,6 +1841,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">48</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 12 (EL2008)^Channel 7^SImonL7]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed8</Name>
@@ -1666,6 +1856,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">49</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 12 (EL2008)^Channel 8^SimonL8]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed9</Name>
@@ -1673,6 +1871,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">50</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 13 (EL2008)^Channel 1^SimonL9]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output" TaskPrio="1">.gatq_xCorrectLed10</Name>
@@ -1680,6 +1886,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">51</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 13 (EL2008)^Channel 2^SimonL10]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Output">.gatq_xRelay</Name>
@@ -1694,6 +1908,14 @@
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">32</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 3^SimonBtnR]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Input" TaskPrio="1">.gati_xGreenButton</Name>
@@ -1701,6 +1923,14 @@
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">33</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 1^SimonBtnG]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Input" TaskPrio="1">.gati_xYellowButton</Name>
@@ -1708,6 +1938,14 @@
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">34</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 4^SimonBtnY]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Input" TaskPrio="1">.gati_xWhiteButton</Name>
@@ -1715,6 +1953,14 @@
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">35</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 2^SimonBtnW]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name>.gat_xValveSolved</Name>
