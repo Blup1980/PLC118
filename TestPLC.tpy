@@ -4,7 +4,7 @@
 	<ProjectInfo>
 		<Path>C:\Users\xavie\Documents\PLC118\TestPLC.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2019-07-13T12:24:38</ChangeDate>
+		<ChangeDate>2019-07-13T17:27:16</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -62,7 +62,7 @@
 	</DirectoryInfos>
 	<DataTypes>
 		<DataType>
-			<Name Decoration="3000047F" Crc32="2475584784" LastChange="2019-07-11T22:00:15">E_SequenceItems</Name>
+			<Name Decoration="3000047F" Crc32="2475584784" LastChange="2019-07-13T15:59:52">E_SequenceItems</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -83,7 +83,7 @@
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="10054CD8" Crc32="3500014943" LastChange="2019-07-11T22:00:15">FB_Debounce</Name>
+			<Name Decoration="10054CD8" Crc32="3500014943" LastChange="2019-07-13T15:59:52">FB_Debounce</Name>
 			<BitSize>480</BitSize>
 			<SubItem>
 				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">fbTON</Name>
@@ -130,7 +130,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100DB17B" Crc32="0265227760" LastChange="2019-07-11T22:00:15">FB_PlaySequence</Name>
+			<Name Decoration="100DB17B" Crc32="0265227760" LastChange="2019-07-13T15:59:52">FB_PlaySequence</Name>
 			<BitSize>512</BitSize>
 			<SubItem>
 				<Name>iSequencePointer</Name>
@@ -216,7 +216,7 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="3000049F" Crc32="1334834885" LastChange="2019-07-11T22:00:15">E_SimonWonState</Name>
+			<Name Decoration="3000049F" Crc32="1334834885" LastChange="2019-07-13T15:59:52">E_SimonWonState</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -258,7 +258,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="10110122" Crc32="2053374012" LastChange="2019-07-11T22:01:18">FB_Simon_PlayWon</Name>
+			<Name Decoration="10110122" Crc32="2053374012" LastChange="2019-07-13T15:59:52">FB_Simon_PlayWon</Name>
 			<BitSize>608</BitSize>
 			<SubItem>
 				<Name>eSimonWonState</Name>
@@ -368,23 +368,6 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="300003AB" Crc32="1319317223" LastChange="2019-07-11T22:00:15">E_SimonState</Name>
-			<Type>INT</Type>
-			<BitSize>16</BitSize>
-			<EnumInfo>
-				<Text>E_playing</Text>
-				<Enum>0</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>E_readUserInput</Text>
-				<Enum>1</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>E_won</Text>
-				<Enum>2</Enum>
-			</EnumInfo>
-		</DataType>
-		<DataType>
 			<Name Decoration="200101AA">ARRAY [0..6] OF USINT</Name>
 			<Type>USINT</Type>
 			<BitSize>56</BitSize>
@@ -403,7 +386,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100A9473" Crc32="1923077786" LastChange="2019-07-13T12:24:34">FB_Valve_PlayWon</Name>
+			<Name Decoration="100A9473" Crc32="1923077786" LastChange="2019-07-13T15:59:52">FB_Valve_PlayWon</Name>
 			<BitSize>480</BitSize>
 			<SubItem>
 				<Name Constant="1">c_auFinalCode</Name>
@@ -469,6 +452,32 @@
 				<CodeIndex>99</CodeIndex>
 				<InitIndex>100</InitIndex>
 			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="20010140">ARRAY [1..8] OF BOOL</Name>
+			<Type>BOOL</Type>
+			<BitSize>64</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>8</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="300003AB" Crc32="1319317223" LastChange="2019-07-13T15:59:52">E_SimonState</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>E_playing</Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_readUserInput</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_won</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
 		</DataType>
 		<DataType>
 			<Name Decoration="200101AE">ARRAY [1..9] OF USINT</Name>
@@ -1038,7 +1047,7 @@
 	</DataTypes>
 	<Functions>
 		<Function>
-			<Name Decoration="100CD937" Crc32="2986945085" LastChange="2019-07-11T22:00:15">F_UserPlayIsValid</Name>
+			<Name Decoration="100CD937" Crc32="2986945085" LastChange="2019-07-13T15:59:52">F_UserPlayIsValid</Name>
 			<FunInfo>
 				<CodeIndex>39</CodeIndex>
 				<ReturnValue>
@@ -1315,13 +1324,13 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="10000000" Crc32="1848619344" LastChange="2019-07-13T12:00:30">MAIN</Name>
+			<Name Decoration="10000000" Crc32="2656468190" LastChange="2019-07-13T15:59:52">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>46</CodeIndex>
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10023420" Crc32="2503703290" LastChange="2019-07-11T22:00:15">P_CircuitBrakers</Name>
+			<Name Decoration="100233F7" Crc32="1659517845" LastChange="2019-07-13T15:59:52">P_CircuitBrakers</Name>
 			<PrgInfo>
 				<CodeIndex>47</CodeIndex>
 				<Symbol>
@@ -1333,13 +1342,13 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10000000" Crc32="3995381838" LastChange="2019-07-11T22:00:15">P_Helmets</Name>
+			<Name Decoration="10000000" Crc32="3021206826" LastChange="2019-07-13T15:59:52">P_Double_Key</Name>
 			<PrgInfo>
 				<CodeIndex>48</CodeIndex>
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1025D9F5" Crc32="1651347062" LastChange="2019-07-11T22:00:15">P_Simon</Name>
+			<Name Decoration="1025D9F5" Crc32="1651347062" LastChange="2019-07-13T15:59:52">P_Simon</Name>
 			<PrgInfo>
 				<CodeIndex>49</CodeIndex>
 				<Symbol>
@@ -1456,7 +1465,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="100616D0" Crc32="0973583405" LastChange="2019-07-13T12:07:38">P_Valves</Name>
+			<Name Decoration="100616D0" Crc32="1173010453" LastChange="2019-07-13T15:59:52">P_Valves</Name>
 			<PrgInfo>
 				<CodeIndex>101</CodeIndex>
 				<Symbol>
@@ -1479,14 +1488,32 @@
 				</Symbol>
 			</PrgInfo>
 		</Program>
+		<Program>
+			<Name Decoration="1004185E" Crc32="2000736014" LastChange="2019-07-13T17:27:14">P_Helmets</Name>
+			<PrgInfo>
+				<CodeIndex>102</CodeIndex>
+				<Symbol>
+					<Name>P_Helmets.c_uMotorSpeed</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.c_uHelmetAcceleration</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.c_uTargetPosition</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.uOpeningState</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
 	</Programs>
 	<Symbols>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">P_CircuitBrakers.c_aeCorrectSequence</Name>
-			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+			<Type Decoration="20010140">ARRAY [1..8] OF BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>14</IOffset>
-			<BitSize>80</BitSize>
+			<IOffset>986</IOffset>
+			<BitSize>64</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1">P_CircuitBrakers.c_iCorrectSequenceLength</Name>
@@ -1797,6 +1824,34 @@
 			<BitSize>480</BitSize>
 		</Symbol>
 		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Helmets.c_uMotorSpeed</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>14</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Helmets.c_uHelmetAcceleration</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>16</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Helmets.c_uTargetPosition</Name>
+			<Type>UDINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>20</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Helmets.uOpeningState</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>18</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
 			<Name TaskPrio="1">.g_xRecoveryMode</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
@@ -1931,7 +1986,22 @@
 			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name>.gat_xHelmetsSolved</Name>
+			<Name Static="Output" TaskPrio="1">.gato_xKeyBox</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">160</IOffset>
+			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 15 (EL2024)^Channel 1^MLKeyBox]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.gat_xHelmetsSolved</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>865</IOffset>
@@ -1952,25 +2022,213 @@
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name>.gat_xKeysSolved</Name>
+			<Name Static="Input" TaskPrio="1">.gati_xHelmetDriverReady</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">320</IOffset>
+			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 19 (EL7031)^STM Status^Ready to enable]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">.gati_xHelmetOnTarget</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">321</IOffset>
+			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 19 (EL7031)^POS Status^In-Target]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">.gati_xHelmetReady</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">352</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xHelmetDriverEnable</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">336</IOffset>
+			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 19 (EL7031)^STM Control^Enable]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xHelmetMotorExecute</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">337</IOffset>
+			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 19 (EL7031)^POS Control^Execute]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xHelmetCouterLatch</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">338</IOffset>
+			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 19 (EL7031)^ENC Control^Set counter]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.qatq_uHelmetCounterValue</Name>
+			<Type>UDINT</Type>
+			<IGroup>61488</IGroup>
+			<IOffset VarConfig="Changeable">28</IOffset>
+			<BitSize>32</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 19 (EL7031)^ENC Control^Set counter value]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.qatq_uHelmetTargetPosition</Name>
+			<Type>UDINT</Type>
+			<IGroup>61488</IGroup>
+			<IOffset VarConfig="Changeable">32</IOffset>
+			<BitSize>32</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 19 (EL7031)^POS Control^Target position]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.qatq_uHelmetVelocity</Name>
+			<Type>INT</Type>
+			<IGroup>61488</IGroup>
+			<IOffset VarConfig="Changeable">36</IOffset>
+			<BitSize>16</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 19 (EL7031)^POS Control^Velocity]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.qatq_uHelmetAcceleration</Name>
+			<Type>UINT</Type>
+			<IGroup>61488</IGroup>
+			<IOffset VarConfig="Changeable">38</IOffset>
+			<BitSize>16</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 19 (EL7031)^POS Control^Acceleration]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.qatq_uHelmetDeceleration</Name>
+			<Type>UINT</Type>
+			<IGroup>61488</IGroup>
+			<IOffset VarConfig="Changeable">40</IOffset>
+			<BitSize>16</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 19 (EL7031)^POS Control^Deceleration]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.gat_xKeysSolved</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>866</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">.gati_xKey1</Name>
+			<Name Static="Input" TaskPrio="1">.gati_xKey1</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">138</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 15^KeyLeft]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">.gati_xKey2</Name>
+			<Name Static="Input" TaskPrio="1">.gati_xKey2</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset VarConfig="Changeable">139</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 16 (EL1819)^Channel 16^KeyRight]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">.gatq_xExitDoor</Name>
+			<Type>BOOL</Type>
+			<IGroup>61489</IGroup>
+			<IOffset VarConfig="Changeable">192</IOffset>
+			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 15 (EL2024)^Channel 2^MLExitDoor]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">.gat_xSimonSolved</Name>
@@ -2255,6 +2513,14 @@
 			<IGroup>61489</IGroup>
 			<IOffset VarConfig="Changeable">64</IOffset>
 			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 15 (EL2024)^Channel 3^Dimplex]]>
+					</Value>
+				</Property>
+			</Properties>
 		</Symbol>
 		<Symbol>
 			<Name Static="Input" TaskPrio="1">.gati_xRedButton</Name>
