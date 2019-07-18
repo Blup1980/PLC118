@@ -4,7 +4,7 @@
 	<ProjectInfo>
 		<Path>C:\Users\xavie\Documents\PLC118\TestPLC.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2019-07-18T18:26:21</ChangeDate>
+		<ChangeDate>2019-07-18T21:14:22</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -454,15 +454,6 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="20010140">ARRAY [1..8] OF BOOL</Name>
-			<Type>BOOL</Type>
-			<BitSize>64</BitSize>
-			<ArrayInfo>
-				<LBound>1</LBound>
-				<Elements>8</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
 			<Name Decoration="300003AB" Crc32="1319317223" LastChange="2019-07-18T18:13:06">E_SimonState</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
@@ -478,6 +469,41 @@
 				<Text>E_won</Text>
 				<Enum>2</Enum>
 			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="3000033F" Crc32="0826431805" LastChange="2019-07-18T20:38:26">E_GameState</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>E_GameStateRecovery</Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_GameStatePlaying</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_GameStateEnded</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="20010140">ARRAY [1..8] OF BOOL</Name>
+			<Type>BOOL</Type>
+			<BitSize>64</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>8</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="2001013A">ARRAY [1..2] OF BOOL</Name>
+			<Type>BOOL</Type>
+			<BitSize>16</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>2</Elements>
+			</ArrayInfo>
 		</DataType>
 		<DataType>
 			<Name Decoration="200101AE">ARRAY [1..9] OF USINT</Name>
@@ -1324,7 +1350,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="100E52BF" Crc32="2196944228" LastChange="2019-07-18T18:13:06">MAIN</Name>
+			<Name Decoration="100E52BF" Crc32="3887617442" LastChange="2019-07-18T21:05:47">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>46</CodeIndex>
 				<Symbol>
@@ -1372,43 +1398,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="100233F7" Crc32="1659517845" LastChange="2019-07-18T18:13:06">P_CircuitBrakers</Name>
-			<PrgInfo>
-				<CodeIndex>47</CodeIndex>
-				<Symbol>
-					<Name>P_CircuitBrakers.c_aeCorrectSequence</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_CircuitBrakers.c_iCorrectSequenceLength</Name>
-				</Symbol>
-			</PrgInfo>
-		</Program>
-		<Program>
-			<Name Decoration="10000000" Crc32="3021206826" LastChange="2019-07-18T18:13:06">P_Double_Key</Name>
-			<PrgInfo>
-				<CodeIndex>48</CodeIndex>
-			</PrgInfo>
-		</Program>
-		<Program>
-			<Name Decoration="1004185E" Crc32="0763762309" LastChange="2019-07-18T18:13:06">P_Helmets</Name>
-			<PrgInfo>
-				<CodeIndex>102</CodeIndex>
-				<Symbol>
-					<Name>P_Helmets.c_uMotorSpeed</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Helmets.c_uHelmetAcceleration</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Helmets.c_uTargetPosition</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Helmets.uOpeningState</Name>
-				</Symbol>
-			</PrgInfo>
-		</Program>
-		<Program>
-			<Name Decoration="1027E640" Crc32="1304284868" LastChange="2019-07-18T18:26:17">P_Simon</Name>
+			<Name Decoration="1027E640" Crc32="3303713784" LastChange="2019-07-18T21:05:22">P_Simon</Name>
 			<PrgInfo>
 				<CodeIndex>49</CodeIndex>
 				<Symbol>
@@ -1531,11 +1521,59 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="100616D0" Crc32="1173010453" LastChange="2019-07-18T18:13:06">P_Valves</Name>
+			<Name Decoration="1004185E" Crc32="4004947547" LastChange="2019-07-18T21:13:14">P_Helmets</Name>
+			<PrgInfo>
+				<CodeIndex>102</CodeIndex>
+				<Symbol>
+					<Name>P_Helmets.c_uMotorSpeed</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.c_uHelmetAcceleration</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.c_uTargetPosition</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.uOpeningState</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="10035FE2" Crc32="4209548933" LastChange="2019-07-18T20:45:57">P_CircuitBrakers</Name>
+			<PrgInfo>
+				<CodeIndex>47</CodeIndex>
+				<Symbol>
+					<Name>P_CircuitBrakers.c_aeCorrectSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_CircuitBrakers.c_aeInitialSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_CircuitBrakers.c_iCorrectSequenceLength</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="100257C3" Crc32="0485535829" LastChange="2019-07-18T21:14:17">P_Double_Key</Name>
+			<PrgInfo>
+				<CodeIndex>48</CodeIndex>
+				<Symbol>
+					<Name>P_Double_Key.c_aeCorrectSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Double_Key.c_aeInitialSequence</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="1007439B" Crc32="0213224092" LastChange="2019-07-18T21:11:15">P_Valves</Name>
 			<PrgInfo>
 				<CodeIndex>101</CodeIndex>
 				<Symbol>
 					<Name>P_Valves.c_aeCorrectSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Valves.c_aeInitialSequence</Name>
 				</Symbol>
 				<Symbol>
 					<Name>P_Valves.c_iCorrectSequenceLength</Name>
@@ -1652,48 +1690,6 @@
 			<Type>UINT</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>1136</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_CircuitBrakers.c_aeCorrectSequence</Name>
-			<Type Decoration="20010140">ARRAY [1..8] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>986</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1">P_CircuitBrakers.c_iCorrectSequenceLength</Name>
-			<Type>INT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>24</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Helmets.c_uMotorSpeed</Name>
-			<Type>INT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>14</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Helmets.c_uHelmetAcceleration</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>16</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Helmets.c_uTargetPosition</Name>
-			<Type>UDINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>20</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Helmets.uOpeningState</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>18</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
@@ -1970,10 +1966,80 @@
 			<BitSize>608</BitSize>
 		</Symbol>
 		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Helmets.c_uMotorSpeed</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>14</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Helmets.c_uHelmetAcceleration</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>16</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Helmets.c_uTargetPosition</Name>
+			<Type>UDINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>20</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Helmets.uOpeningState</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>18</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_CircuitBrakers.c_aeCorrectSequence</Name>
+			<Type Decoration="20010140">ARRAY [1..8] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>986</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_CircuitBrakers.c_aeInitialSequence</Name>
+			<Type Decoration="20010140">ARRAY [1..8] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1146</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1">P_CircuitBrakers.c_iCorrectSequenceLength</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>24</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1">P_Double_Key.c_aeCorrectSequence</Name>
+			<Type Decoration="2001013A">ARRAY [1..2] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1154</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Double_Key.c_aeInitialSequence</Name>
+			<Type Decoration="2001013A">ARRAY [1..2] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1156</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
 			<Name Constant="1" TaskPrio="1">P_Valves.c_aeCorrectSequence</Name>
 			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>1086</IOffset>
+			<BitSize>72</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Valves.c_aeInitialSequence</Name>
+			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1158</IOffset>
 			<BitSize>72</BitSize>
 		</Symbol>
 		<Symbol>
@@ -2012,10 +2078,17 @@
 			<BitSize>480</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">.g_xRecoveryMode</Name>
+			<Name TaskPrio="1">.g_eGameState</Name>
+			<Type Decoration="3000033F">E_GameState</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1168</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>.g_xReadyToPlay</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>889</IOffset>
+			<IOffset>1139</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
@@ -2032,6 +2105,13 @@
 					</Value>
 				</Property>
 			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.gat_xBreakerReadyToPlay</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1167</IOffset>
+			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">.gat_xBrakerSolved</Name>
@@ -2174,6 +2254,13 @@
 					</Value>
 				</Property>
 			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.gat_xHelmetsReadyToPlay</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1170</IOffset>
+			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">.gat_xHelmetsSolved</Name>
@@ -2390,6 +2477,13 @@
 					</Value>
 				</Property>
 			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.gat_xKeysReadyToPlay</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1171</IOffset>
+			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">.gat_xKeysSolved</Name>
@@ -2890,6 +2984,13 @@
 			<Type>USINT</Type>
 			<IGroup>61472</IGroup>
 			<IOffset VarConfig="Changeable">52</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.gat_xValvesReadyToPlay</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1172</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
