@@ -4,16 +4,16 @@
 	<ProjectInfo>
 		<Path>C:\Users\xavie\Documents\PLC118\TestPLC.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2020-05-26T22:04:22</ChangeDate>
+		<ChangeDate>2021-03-01T20:44:56</ChangeDate>
 		<Library>
 			<Name>PlcSystem.lib</Name>
 			<Path>C:\TwinCAT\Plc\Upload\PlcSystem.lib</Path>
-			<ChangeDate>2001-07-19T11:03:02</ChangeDate>
+			<ChangeDate>2001-07-19T10:03:02</ChangeDate>
 		</Library>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\Plc\Upload\STANDARD.LIB</Path>
-			<ChangeDate>1998-06-05T11:03:02</ChangeDate>
+			<ChangeDate>1998-06-05T10:03:02</ChangeDate>
 		</Library>
 	</ProjectInfo>
 	<RoutingInfo>
@@ -75,7 +75,7 @@
 	</DirectoryInfos>
 	<DataTypes>
 		<DataType>
-			<Name Decoration="3000047F" Crc32="2475584784" LastChange="2020-03-28T19:50:50">E_SequenceItems</Name>
+			<Name Decoration="3000047F" Crc32="2475584784" LastChange="2021-03-01T19:32:37">E_SequenceItems</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -96,7 +96,7 @@
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="10054CD8" Crc32="3500014943" LastChange="2020-03-28T19:50:50">FB_Debounce</Name>
+			<Name Decoration="10054CD8" Crc32="3500014943" LastChange="2021-03-01T19:32:37">FB_Debounce</Name>
 			<BitSize>480</BitSize>
 			<SubItem>
 				<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">fbTON</Name>
@@ -129,8 +129,106 @@
 				<BitOffs>448</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>42</CodeIndex>
-				<InitIndex>43</InitIndex>
+				<CodeIndex>104</CodeIndex>
+				<InitIndex>105</InitIndex>
+			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="100F4E49" Crc32="1778765750" LastChange="2021-03-01T19:32:37">FB_GetHelmID</Name>
+			<BitSize>480</BitSize>
+			<SubItem>
+				<Name Constant="1">c_uHelmGold_L</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>0</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1">c_uHelmGold_H</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>32</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1">c_uHelmGoldID</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>64</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1">c_uHelmRed_L</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>96</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1">c_uHelmRed_H</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>128</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1">c_uHelmRedID</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>160</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1">c_uHelmBlack_L</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>192</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1">c_uHelmBlack_H</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>224</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1">c_uHelmBlackID</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>256</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1">c_uHelmWhite_L</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>288</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1">c_uHelmWhite_H</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>320</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name Constant="1">c_uHelmWhiteID</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>352</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input">i_uLow</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>384</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Input">i_uHigh</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>416</BitOffs>
+			</SubItem>
+			<SubItem>
+				<Name FbParameter="Output">o_uHelmID</Name>
+				<Type>UDINT</Type>
+				<BitSize>32</BitSize>
+				<BitOffs>448</BitOffs>
+			</SubItem>
+			<FbInfo>
+				<CodeIndex>106</CodeIndex>
+				<InitIndex>107</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -143,7 +241,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100DB165" Crc32="0741429798" LastChange="2020-03-28T19:50:50">FB_PlaySequence</Name>
+			<Name Decoration="100DB165" Crc32="0741429798" LastChange="2021-03-01T19:32:37">FB_PlaySequence</Name>
 			<BitSize>480</BitSize>
 			<SubItem>
 				<Name>iSequencePointer</Name>
@@ -224,12 +322,12 @@
 				<BitOffs>448</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>44</CodeIndex>
-				<InitIndex>45</InitIndex>
+				<CodeIndex>108</CodeIndex>
+				<InitIndex>109</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="3000049F" Crc32="1334834885" LastChange="2020-03-28T19:50:50">E_SimonWonState</Name>
+			<Name Decoration="3000049F" Crc32="1334834885" LastChange="2021-03-01T19:32:37">E_SimonWonState</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -271,7 +369,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="10110122" Crc32="3248671705" LastChange="2020-03-28T19:50:50">FB_Simon_PlayWon</Name>
+			<Name Decoration="10110122" Crc32="3248671705" LastChange="2021-03-01T19:32:37">FB_Simon_PlayWon</Name>
 			<BitSize>608</BitSize>
 			<SubItem>
 				<Name>eSimonWonState</Name>
@@ -376,8 +474,8 @@
 				<BitOffs>584</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>97</CodeIndex>
-				<InitIndex>98</InitIndex>
+				<CodeIndex>110</CodeIndex>
+				<InitIndex>111</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -399,7 +497,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100A9473" Crc32="1923077786" LastChange="2020-03-28T19:50:50">FB_Valve_PlayWon</Name>
+			<Name Decoration="100A9473" Crc32="1923077786" LastChange="2021-03-01T19:32:37">FB_Valve_PlayWon</Name>
 			<BitSize>480</BitSize>
 			<SubItem>
 				<Name Constant="1">c_auFinalCode</Name>
@@ -462,9 +560,18 @@
 				<BitOffs>456</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>99</CodeIndex>
-				<InitIndex>100</InitIndex>
+				<CodeIndex>112</CodeIndex>
+				<InitIndex>113</InitIndex>
 			</FbInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="200101AE">ARRAY [1..9] OF USINT</Name>
+			<Type>USINT</Type>
+			<BitSize>72</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>9</Elements>
+			</ArrayInfo>
 		</DataType>
 		<DataType>
 			<Name Decoration="20010140">ARRAY [1..8] OF BOOL</Name>
@@ -485,7 +592,16 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="300003AB" Crc32="1319317223" LastChange="2020-03-28T19:50:50">E_SimonState</Name>
+			<Name Decoration="2001019C">ARRAY [1..4] OF UDINT</Name>
+			<Type>UDINT</Type>
+			<BitSize>128</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>4</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="300003AB" Crc32="1319317223" LastChange="2021-03-01T19:32:37">E_SimonState</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -502,16 +618,7 @@
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="200101AE">ARRAY [1..9] OF USINT</Name>
-			<Type>USINT</Type>
-			<BitSize>72</BitSize>
-			<ArrayInfo>
-				<LBound>1</LBound>
-				<Elements>9</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="3000033F" Crc32="0413316750" LastChange="2020-03-28T19:50:50">E_GameState</Name>
+			<Name Decoration="3000033F" Crc32="0413316750" LastChange="2021-03-01T19:32:37">E_GameState</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -530,113 +637,6 @@
 				<Text>E_GameStateEnded</Text>
 				<Enum>3</Enum>
 			</EnumInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="100F4E49" Crc32="1778765750" LastChange="2020-05-26T21:56:33">FB_GetHelmID</Name>
-			<BitSize>480</BitSize>
-			<SubItem>
-				<Name Constant="1">c_uHelmGold_L</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>0</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1">c_uHelmGold_H</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>32</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1">c_uHelmGoldID</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>64</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1">c_uHelmRed_L</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>96</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1">c_uHelmRed_H</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>128</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1">c_uHelmRedID</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>160</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1">c_uHelmBlack_L</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>192</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1">c_uHelmBlack_H</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>224</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1">c_uHelmBlackID</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>256</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1">c_uHelmWhite_L</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>288</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1">c_uHelmWhite_H</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>320</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name Constant="1">c_uHelmWhiteID</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>352</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input">i_uLow</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>384</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Input">i_uHigh</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>416</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name FbParameter="Output">o_uHelmID</Name>
-				<Type>UDINT</Type>
-				<BitSize>32</BitSize>
-				<BitOffs>448</BitOffs>
-			</SubItem>
-			<FbInfo>
-				<CodeIndex>165</CodeIndex>
-				<InitIndex>166</InitIndex>
-			</FbInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="2001019C">ARRAY [1..4] OF UDINT</Name>
-			<Type>UDINT</Type>
-			<BitSize>128</BitSize>
-			<ArrayInfo>
-				<LBound>1</LBound>
-				<Elements>4</Elements>
-			</ArrayInfo>
 		</DataType>
 		<DataType>
 			<Name Decoration="20017954">ARRAY [1..4] OF SYSTEMTASKINFOTYPE</Name>
@@ -756,8 +756,8 @@
 				<BitOffs>672</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>106</CodeIndex>
-				<InitIndex>107</InitIndex>
+				<CodeIndex>10</CodeIndex>
+				<InitIndex>11</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -860,8 +860,8 @@
 				<BitOffs>528</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>108</CodeIndex>
-				<InitIndex>109</InitIndex>
+				<CodeIndex>12</CodeIndex>
+				<InitIndex>13</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -994,8 +994,8 @@
 				<BitOffs>736</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>110</CodeIndex>
-				<InitIndex>111</InitIndex>
+				<CodeIndex>14</CodeIndex>
+				<InitIndex>15</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -1137,8 +1137,8 @@
 				<BitOffs>768</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>112</CodeIndex>
-				<InitIndex>113</InitIndex>
+				<CodeIndex>16</CodeIndex>
+				<InitIndex>17</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -1211,8 +1211,8 @@
 				<BitOffs>416</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>114</CodeIndex>
-				<InitIndex>115</InitIndex>
+				<CodeIndex>18</CodeIndex>
+				<InitIndex>19</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -1267,8 +1267,8 @@
 				<BitOffs>352</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>116</CodeIndex>
-				<InitIndex>117</InitIndex>
+				<CodeIndex>20</CodeIndex>
+				<InitIndex>21</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -1383,8 +1383,8 @@
 				<BitOffs>640</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>118</CodeIndex>
-				<InitIndex>119</InitIndex>
+				<CodeIndex>22</CodeIndex>
+				<InitIndex>23</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -1508,8 +1508,8 @@
 				<BitOffs>672</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>120</CodeIndex>
-				<InitIndex>121</InitIndex>
+				<CodeIndex>24</CodeIndex>
+				<InitIndex>25</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -1570,8 +1570,8 @@
 				<BitOffs>352</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>122</CodeIndex>
-				<InitIndex>123</InitIndex>
+				<CodeIndex>26</CodeIndex>
+				<InitIndex>27</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -1626,8 +1626,8 @@
 				<BitOffs>352</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>124</CodeIndex>
-				<InitIndex>125</InitIndex>
+				<CodeIndex>28</CodeIndex>
+				<InitIndex>29</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -1742,8 +1742,8 @@
 				<BitOffs>640</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>126</CodeIndex>
-				<InitIndex>127</InitIndex>
+				<CodeIndex>30</CodeIndex>
+				<InitIndex>31</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -1810,8 +1810,8 @@
 				<BitOffs>384</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>128</CodeIndex>
-				<InitIndex>129</InitIndex>
+				<CodeIndex>32</CodeIndex>
+				<InitIndex>33</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -1854,8 +1854,8 @@
 				<BitOffs>288</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>130</CodeIndex>
-				<InitIndex>131</InitIndex>
+				<CodeIndex>34</CodeIndex>
+				<InitIndex>35</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -1970,8 +1970,8 @@
 				<BitOffs>608</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>132</CodeIndex>
-				<InitIndex>133</InitIndex>
+				<CodeIndex>36</CodeIndex>
+				<InitIndex>37</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2023,8 +2023,8 @@
 				<BitOffs>4096</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>136</CodeIndex>
-				<InitIndex>137</InitIndex>
+				<CodeIndex>40</CodeIndex>
+				<InitIndex>41</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2124,8 +2124,8 @@
 				<BitOffs>480</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>138</CodeIndex>
-				<InitIndex>139</InitIndex>
+				<CodeIndex>42</CodeIndex>
+				<InitIndex>43</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2240,8 +2240,8 @@
 				<BitOffs>2624</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>140</CodeIndex>
-				<InitIndex>141</InitIndex>
+				<CodeIndex>44</CodeIndex>
+				<InitIndex>45</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2368,8 +2368,8 @@
 				<BitOffs>608</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>142</CodeIndex>
-				<InitIndex>143</InitIndex>
+				<CodeIndex>46</CodeIndex>
+				<InitIndex>47</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2478,8 +2478,8 @@
 				<BitOffs>544</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>144</CodeIndex>
-				<InitIndex>145</InitIndex>
+				<CodeIndex>48</CodeIndex>
+				<InitIndex>49</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2606,8 +2606,8 @@
 				<BitOffs>608</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>146</CodeIndex>
-				<InitIndex>147</InitIndex>
+				<CodeIndex>50</CodeIndex>
+				<InitIndex>51</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2620,8 +2620,8 @@
 				<BitOffs>0</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>149</CodeIndex>
-				<InitIndex>150</InitIndex>
+				<CodeIndex>53</CodeIndex>
+				<InitIndex>54</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2640,8 +2640,8 @@
 				<BitOffs>32</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>151</CodeIndex>
-				<InitIndex>152</InitIndex>
+				<CodeIndex>55</CodeIndex>
+				<InitIndex>56</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2654,8 +2654,8 @@
 				<BitOffs>0</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>153</CodeIndex>
-				<InitIndex>154</InitIndex>
+				<CodeIndex>57</CodeIndex>
+				<InitIndex>58</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2674,8 +2674,8 @@
 				<BitOffs>32</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>155</CodeIndex>
-				<InitIndex>156</InitIndex>
+				<CodeIndex>59</CodeIndex>
+				<InitIndex>60</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2828,8 +2828,8 @@
 				<BitOffs>64</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>8</CodeIndex>
-				<InitIndex>9</InitIndex>
+				<CodeIndex>70</CodeIndex>
+				<InitIndex>71</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2890,8 +2890,8 @@
 				<BitOffs>64</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>10</CodeIndex>
-				<InitIndex>11</InitIndex>
+				<CodeIndex>72</CodeIndex>
+				<InitIndex>73</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -2988,8 +2988,8 @@
 				<BitOffs>80</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>12</CodeIndex>
-				<InitIndex>13</InitIndex>
+				<CodeIndex>74</CodeIndex>
+				<InitIndex>75</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -3020,8 +3020,8 @@
 				<BitOffs>16</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>15</CodeIndex>
-				<InitIndex>16</InitIndex>
+				<CodeIndex>77</CodeIndex>
+				<InitIndex>78</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -3052,8 +3052,8 @@
 				<BitOffs>16</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>22</CodeIndex>
-				<InitIndex>23</InitIndex>
+				<CodeIndex>84</CodeIndex>
+				<InitIndex>85</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -3078,8 +3078,8 @@
 				<BitOffs>16</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>26</CodeIndex>
-				<InitIndex>27</InitIndex>
+				<CodeIndex>88</CodeIndex>
+				<InitIndex>89</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -3110,8 +3110,8 @@
 				<BitOffs>24</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>28</CodeIndex>
-				<InitIndex>29</InitIndex>
+				<CodeIndex>90</CodeIndex>
+				<InitIndex>91</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -3136,8 +3136,8 @@
 				<BitOffs>16</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>30</CodeIndex>
-				<InitIndex>31</InitIndex>
+				<CodeIndex>92</CodeIndex>
+				<InitIndex>93</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -3198,8 +3198,8 @@
 				<BitOffs>160</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>32</CodeIndex>
-				<InitIndex>33</InitIndex>
+				<CodeIndex>94</CodeIndex>
+				<InitIndex>95</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -3260,8 +3260,8 @@
 				<BitOffs>160</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>34</CodeIndex>
-				<InitIndex>35</InitIndex>
+				<CodeIndex>96</CodeIndex>
+				<InitIndex>97</InitIndex>
 			</FbInfo>
 		</DataType>
 		<DataType>
@@ -3313,16 +3313,16 @@
 				<BitOffs>128</BitOffs>
 			</SubItem>
 			<FbInfo>
-				<CodeIndex>36</CodeIndex>
-				<InitIndex>37</InitIndex>
+				<CodeIndex>98</CodeIndex>
+				<InitIndex>99</InitIndex>
 			</FbInfo>
 		</DataType>
 	</DataTypes>
 	<Functions>
 		<Function>
-			<Name Decoration="100CD911" Crc32="1841317191" LastChange="2020-03-28T19:50:50">F_UserPlayIsValid</Name>
+			<Name Decoration="100CD911" Crc32="1841317191" LastChange="2021-03-01T19:32:37">F_UserPlayIsValid</Name>
 			<FunInfo>
-				<CodeIndex>39</CodeIndex>
+				<CodeIndex>101</CodeIndex>
 				<ReturnValue>
 					<Name>F_UserPlayIsValid</Name>
 					<Type>BOOL</Type>
@@ -3388,7 +3388,7 @@
 		<Function>
 			<Name Decoration="100452BA" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">ADSLOGDINT</Name>
 			<FunInfo>
-				<CodeIndex>103</CodeIndex>
+				<CodeIndex>7</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">ADSLOGDINT</Name>
 					<Type>DINT</Type>
@@ -3414,7 +3414,7 @@
 		<Function>
 			<Name Decoration="1004537F" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">ADSLOGLREAL</Name>
 			<FunInfo>
-				<CodeIndex>104</CodeIndex>
+				<CodeIndex>8</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">ADSLOGLREAL</Name>
 					<Type>DINT</Type>
@@ -3440,7 +3440,7 @@
 		<Function>
 			<Name Decoration="100493FB" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">ADSLOGSTR</Name>
 			<FunInfo>
-				<CodeIndex>105</CodeIndex>
+				<CodeIndex>9</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">ADSLOGSTR</Name>
 					<Type>DINT</Type>
@@ -3466,7 +3466,7 @@
 		<Function>
 			<Name Decoration="10030A7D" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">CLEARBIT32</Name>
 			<FunInfo>
-				<CodeIndex>134</CodeIndex>
+				<CodeIndex>38</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">CLEARBIT32</Name>
 					<Type>DWORD</Type>
@@ -3487,7 +3487,7 @@
 		<Function>
 			<Name Decoration="10040D41" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">CSETBIT32</Name>
 			<FunInfo>
-				<CodeIndex>135</CodeIndex>
+				<CodeIndex>39</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">CSETBIT32</Name>
 					<Type>DWORD</Type>
@@ -3516,7 +3516,7 @@
 		<Function>
 			<Name Decoration="1003099A" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">GETBIT32</Name>
 			<FunInfo>
-				<CodeIndex>148</CodeIndex>
+				<CodeIndex>52</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">GETBIT32</Name>
 					<Type>BOOL</Type>
@@ -3537,7 +3537,7 @@
 		<Function>
 			<Name Decoration="10040D1E" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">LPTSIGNAL</Name>
 			<FunInfo>
-				<CodeIndex>157</CodeIndex>
+				<CodeIndex>61</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">LPTSIGNAL</Name>
 					<Type>BOOL</Type>
@@ -3563,7 +3563,7 @@
 		<Function>
 			<Name Decoration="100307F2" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">ROL32</Name>
 			<FunInfo>
-				<CodeIndex>158</CodeIndex>
+				<CodeIndex>62</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">ROL32</Name>
 					<Type>DWORD</Type>
@@ -3584,7 +3584,7 @@
 		<Function>
 			<Name Decoration="100307F8" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">ROR32</Name>
 			<FunInfo>
-				<CodeIndex>159</CodeIndex>
+				<CodeIndex>63</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">ROR32</Name>
 					<Type>DWORD</Type>
@@ -3605,7 +3605,7 @@
 		<Function>
 			<Name Decoration="10030A02" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">SETBIT32</Name>
 			<FunInfo>
-				<CodeIndex>160</CodeIndex>
+				<CodeIndex>64</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">SETBIT32</Name>
 					<Type>DWORD</Type>
@@ -3626,7 +3626,7 @@
 		<Function>
 			<Name Decoration="100307EC" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">SHL32</Name>
 			<FunInfo>
-				<CodeIndex>161</CodeIndex>
+				<CodeIndex>65</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">SHL32</Name>
 					<Type>DWORD</Type>
@@ -3647,7 +3647,7 @@
 		<Function>
 			<Name Decoration="100307F2" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">SHR32</Name>
 			<FunInfo>
-				<CodeIndex>162</CodeIndex>
+				<CodeIndex>66</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\PlcSystem.lib">SHR32</Name>
 					<Type>DWORD</Type>
@@ -3668,7 +3668,7 @@
 		<Function>
 			<Name Decoration="1003CF58" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">CONCAT</Name>
 			<FunInfo>
-				<CodeIndex>7</CodeIndex>
+				<CodeIndex>69</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">CONCAT</Name>
 					<Type Decoration="40000100">STRING(255)</Type>
@@ -3689,7 +3689,7 @@
 		<Function>
 			<Name Decoration="10048DE1" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">DELETE</Name>
 			<FunInfo>
-				<CodeIndex>14</CodeIndex>
+				<CodeIndex>76</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">DELETE</Name>
 					<Type Decoration="40000100">STRING(255)</Type>
@@ -3715,7 +3715,7 @@
 		<Function>
 			<Name Decoration="10038BEA" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">FIND</Name>
 			<FunInfo>
-				<CodeIndex>17</CodeIndex>
+				<CodeIndex>79</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">FIND</Name>
 					<Type>INT</Type>
@@ -3736,7 +3736,7 @@
 		<Function>
 			<Name Decoration="1004D151" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">INSERT</Name>
 			<FunInfo>
-				<CodeIndex>18</CodeIndex>
+				<CodeIndex>80</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">INSERT</Name>
 					<Type Decoration="40000100">STRING(255)</Type>
@@ -3762,7 +3762,7 @@
 		<Function>
 			<Name Decoration="10038BD5" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">LEFT</Name>
 			<FunInfo>
-				<CodeIndex>19</CodeIndex>
+				<CodeIndex>81</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">LEFT</Name>
 					<Type Decoration="40000100">STRING(255)</Type>
@@ -3783,7 +3783,7 @@
 		<Function>
 			<Name Decoration="10024688" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">LEN</Name>
 			<FunInfo>
-				<CodeIndex>20</CodeIndex>
+				<CodeIndex>82</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">LEN</Name>
 					<Type>INT</Type>
@@ -3799,7 +3799,7 @@
 		<Function>
 			<Name Decoration="10048D08" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">MID</Name>
 			<FunInfo>
-				<CodeIndex>21</CodeIndex>
+				<CodeIndex>83</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">MID</Name>
 					<Type Decoration="40000100">STRING(255)</Type>
@@ -3825,7 +3825,7 @@
 		<Function>
 			<Name Decoration="1005D217" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">REPLACE</Name>
 			<FunInfo>
-				<CodeIndex>24</CodeIndex>
+				<CodeIndex>86</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">REPLACE</Name>
 					<Type Decoration="40000100">STRING(255)</Type>
@@ -3856,7 +3856,7 @@
 		<Function>
 			<Name Decoration="10038C28" IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">RIGHT</Name>
 			<FunInfo>
-				<CodeIndex>25</CodeIndex>
+				<CodeIndex>87</CodeIndex>
 				<ReturnValue>
 					<Name IsDefinedInLibrary="1" Library="C:\TwinCAT\Plc\Upload\STANDARD.LIB">RIGHT</Name>
 					<Type Decoration="40000100">STRING(255)</Type>
@@ -3877,63 +3877,9 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="10035FE2" Crc32="4209548933" LastChange="2020-03-28T19:50:50">P_CircuitBrakers</Name>
+			<Name Decoration="1016297E" Crc32="3961586004" LastChange="2021-03-01T19:32:37">MAIN</Name>
 			<PrgInfo>
-				<CodeIndex>47</CodeIndex>
-				<Symbol>
-					<Name>P_CircuitBrakers.c_aeCorrectSequence</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_CircuitBrakers.c_aeInitialSequence</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_CircuitBrakers.c_iCorrectSequenceLength</Name>
-				</Symbol>
-			</PrgInfo>
-		</Program>
-		<Program>
-			<Name Decoration="100257C3" Crc32="0485535829" LastChange="2020-03-28T19:50:50">P_Double_Key</Name>
-			<PrgInfo>
-				<CodeIndex>48</CodeIndex>
-				<Symbol>
-					<Name>P_Double_Key.c_aeCorrectSequence</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Double_Key.c_aeInitialSequence</Name>
-				</Symbol>
-			</PrgInfo>
-		</Program>
-		<Program>
-			<Name Decoration="1007439B" Crc32="0213224092" LastChange="2020-03-28T19:50:50">P_Valves</Name>
-			<PrgInfo>
-				<CodeIndex>101</CodeIndex>
-				<Symbol>
-					<Name>P_Valves.c_aeCorrectSequence</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Valves.c_aeInitialSequence</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Valves.c_iCorrectSequenceLength</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Valves.c_auFinalCode</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Valves.c_uFinalCodeLength</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Valves.c_tWonPeriod</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Valves.fbPlayWon</Name>
-				</Symbol>
-			</PrgInfo>
-		</Program>
-		<Program>
-			<Name Decoration="1016297E" Crc32="2838168721" LastChange="2020-03-28T19:56:33">MAIN</Name>
-			<PrgInfo>
-				<CodeIndex>46</CodeIndex>
+				<CodeIndex>114</CodeIndex>
 				<Symbol>
 					<Name>MAIN.ca_uPlayList</Name>
 				</Symbol>
@@ -4003,9 +3949,87 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="102AF9ED" Crc32="0849849416" LastChange="2020-03-28T20:07:25">P_Simon</Name>
+			<Name Decoration="10000000" Crc32="3952988137" LastChange="2021-03-01T19:40:05">P_Berk</Name>
 			<PrgInfo>
-				<CodeIndex>49</CodeIndex>
+				<CodeIndex>115</CodeIndex>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="10035FE2" Crc32="4209548933" LastChange="2021-03-01T19:32:37">P_CircuitBrakers</Name>
+			<PrgInfo>
+				<CodeIndex>116</CodeIndex>
+				<Symbol>
+					<Name>P_CircuitBrakers.c_aeCorrectSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_CircuitBrakers.c_aeInitialSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_CircuitBrakers.c_iCorrectSequenceLength</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="100257C3" Crc32="0485535829" LastChange="2021-03-01T19:32:37">P_Double_Key</Name>
+			<PrgInfo>
+				<CodeIndex>117</CodeIndex>
+				<Symbol>
+					<Name>P_Double_Key.c_aeCorrectSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Double_Key.c_aeInitialSequence</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="100BF160" Crc32="2791963001" LastChange="2021-03-01T19:32:37">P_Helmets</Name>
+			<PrgInfo>
+				<CodeIndex>118</CodeIndex>
+				<Symbol>
+					<Name>P_Helmets.c_uMotorSpeed</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.c_uHelmetAcceleration</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.c_uTargetPosition</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.c_auCorrectSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.c_uMotorSound</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.c_uVolumeMotorHotel</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.c_uVolumeMotorSimon</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.FB_GetHelmID</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.c_auCurrentSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.uRecoveryState</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Helmets.uOpeningState</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="10000000" Crc32="3543364970" LastChange="2021-03-01T19:39:36">P_HotelDoor</Name>
+			<PrgInfo>
+				<CodeIndex>119</CodeIndex>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="102AF9ED" Crc32="0849849416" LastChange="2021-03-01T19:32:37">P_Simon</Name>
+			<PrgInfo>
+				<CodeIndex>120</CodeIndex>
 				<Symbol>
 					<Name>P_Simon.c_aeCorrectSequence</Name>
 				</Symbol>
@@ -4135,695 +4159,683 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="100BF160" Crc32="2791963001" LastChange="2020-05-26T22:04:15">P_Helmets</Name>
+			<Name Decoration="1007439B" Crc32="0213224092" LastChange="2021-03-01T19:32:37">P_Valves</Name>
 			<PrgInfo>
-				<CodeIndex>102</CodeIndex>
+				<CodeIndex>121</CodeIndex>
 				<Symbol>
-					<Name>P_Helmets.c_uMotorSpeed</Name>
+					<Name>P_Valves.c_aeCorrectSequence</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_Helmets.c_uHelmetAcceleration</Name>
+					<Name>P_Valves.c_aeInitialSequence</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_Helmets.c_uTargetPosition</Name>
+					<Name>P_Valves.c_iCorrectSequenceLength</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_Helmets.c_auCorrectSequence</Name>
+					<Name>P_Valves.c_auFinalCode</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_Helmets.c_uMotorSound</Name>
+					<Name>P_Valves.c_uFinalCodeLength</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_Helmets.c_uVolumeMotorHotel</Name>
+					<Name>P_Valves.c_tWonPeriod</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_Helmets.c_uVolumeMotorSimon</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Helmets.FB_GetHelmID</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Helmets.c_auCurrentSequence</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Helmets.uRecoveryState</Name>
-				</Symbol>
-				<Symbol>
-					<Name>P_Helmets.uOpeningState</Name>
+					<Name>P_Valves.fbPlayWon</Name>
 				</Symbol>
 			</PrgInfo>
 		</Program>
 	</Programs>
 	<Symbols>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_CircuitBrakers.c_aeCorrectSequence</Name>
-			<Type Decoration="20010140">ARRAY [1..8] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>986</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_CircuitBrakers.c_aeInitialSequence</Name>
-			<Type Decoration="20010140">ARRAY [1..8] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1146</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1">P_CircuitBrakers.c_iCorrectSequenceLength</Name>
-			<Type>INT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>24</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1">P_Double_Key.c_aeCorrectSequence</Name>
-			<Type Decoration="2001013A">ARRAY [1..2] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1154</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Double_Key.c_aeInitialSequence</Name>
-			<Type Decoration="2001013A">ARRAY [1..2] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1156</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Valves.c_aeCorrectSequence</Name>
-			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1086</IOffset>
-			<BitSize>72</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Valves.c_aeInitialSequence</Name>
-			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1158</IOffset>
-			<BitSize>72</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1">P_Valves.c_iCorrectSequenceLength</Name>
-			<Type>INT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>996</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Valves.c_auFinalCode</Name>
-			<Type Decoration="20010157">ARRAY [1..4] OF UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>998</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Valves.c_uFinalCodeLength</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1006</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Valves.c_tWonPeriod</Name>
-			<Type>TIME</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1008</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Valves.fbPlayWon</Name>
-			<Type Decoration="100A9473">FB_Valve_PlayWon</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1012</IOffset>
-			<BitSize>480</BitSize>
-		</Symbol>
-		<Symbol>
 			<Name Constant="1" TaskPrio="1">MAIN.ca_uPlayList</Name>
 			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1096</IOffset>
+			<IOffset>99</IOffset>
 			<BitSize>72</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">MAIN.ca_uPlayListVolumeSimon</Name>
 			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1280</IOffset>
+			<IOffset>108</IOffset>
 			<BitSize>72</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">MAIN.ca_uPlayListVolumeHotel</Name>
 			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1289</IOffset>
+			<IOffset>117</IOffset>
 			<BitSize>72</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">MAIN.c_uPlayListLength</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1073</IOffset>
+			<IOffset>126</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">MAIN.c_uGameEndSound</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1081</IOffset>
+			<IOffset>127</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">MAIN.c_uGameEndVolumeSimon</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1078</IOffset>
+			<IOffset>128</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">MAIN.c_uGameEndVolumeHotel</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1080</IOffset>
+			<IOffset>129</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">MAIN.c_uDispatchSound</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>847</IOffset>
+			<IOffset>130</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">MAIN.c_uVolumeDispatch</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1072</IOffset>
+			<IOffset>131</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">MAIN.itPeriod</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1108</IOffset>
+			<IOffset>132</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.uState</Name>
 			<Type>UINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1084</IOffset>
+			<IOffset>136</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.ftTON</Name>
 			<Type Decoration="10060D24">TON</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1112</IOffset>
+			<IOffset>140</IOffset>
 			<BitSize>192</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.xTimerTrigger</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1079</IOffset>
+			<IOffset>138</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name>MAIN.uIndex</Name>
 			<Type>UINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1136</IOffset>
+			<IOffset>164</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.udStartTimeLow</Name>
 			<Type>UDINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1256</IOffset>
+			<IOffset>168</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.udStartTimeHigh</Name>
 			<Type>UDINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1260</IOffset>
+			<IOffset>172</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.udCurrentTimeLow</Name>
 			<Type>UDINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1264</IOffset>
+			<IOffset>176</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.udCurrentTimeHigh</Name>
 			<Type>UDINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1268</IOffset>
+			<IOffset>180</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.fbSytemTime</Name>
 			<Type Decoration="100207EF">GETSYSTEMTIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1272</IOffset>
+			<IOffset>184</IOffset>
 			<BitSize>64</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.uAmbientMusic</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1074</IOffset>
+			<IOffset>139</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.uPlaylistIndex</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1075</IOffset>
+			<IOffset>166</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.xTriggerEndMusic</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1077</IOffset>
+			<IOffset>167</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_aeCorrectSequence</Name>
-			<Type Decoration="20013904">ARRAY [1..5] OF E_SEQUENCEITEMS</Type>
+			<Name Constant="1" TaskPrio="1">P_CircuitBrakers.c_aeCorrectSequence</Name>
+			<Type Decoration="20010140">ARRAY [1..8] OF BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1298</IOffset>
-			<BitSize>80</BitSize>
+			<IOffset>192</IOffset>
+			<BitSize>64</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_iCorrectSequenceLength</Name>
+			<Name Constant="1" TaskPrio="1">P_CircuitBrakers.c_aeInitialSequence</Name>
+			<Type Decoration="20010140">ARRAY [1..8] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>200</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1">P_CircuitBrakers.c_iCorrectSequenceLength</Name>
 			<Type>INT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>42</IOffset>
+			<IOffset>208</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_tDebounceTime</Name>
-			<Type>TIME</Type>
+			<Name Constant="1">P_Double_Key.c_aeCorrectSequence</Name>
+			<Type Decoration="2001013A">ARRAY [1..2] OF BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>44</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_tPlayerTimeoutTime</Name>
-			<Type>TIME</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>48</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_tLightOnPeriod</Name>
-			<Type>TIME</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>52</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_tLightOffPeriod</Name>
-			<Type>TIME</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>56</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_uSoundVolumeLeft</Name>
-			<Type>USINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>26</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_uSoundVolumeRight</Name>
-			<Type>USINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>27</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_uFinishedSound</Name>
-			<Type>USINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>864</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_uErrorSound</Name>
-			<Type>USINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1095</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_uRightSound</Name>
-			<Type>USINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1138</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_axFinalCode1</Name>
-			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>867</IOffset>
-			<BitSize>80</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_axFinalCode2</Name>
-			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>879</IOffset>
-			<BitSize>80</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_axFinalCode3</Name>
-			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>890</IOffset>
-			<BitSize>80</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Simon.c_tLightWonPeriod</Name>
-			<Type>TIME</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>900</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.eSimonState</Name>
-			<Type Decoration="300003AB">E_SimonState</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>60</IOffset>
+			<IOffset>210</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">P_Simon.aeResultLeds</Name>
-			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+			<Name Constant="1" TaskPrio="1">P_Double_Key.c_aeInitialSequence</Name>
+			<Type Decoration="2001013A">ARRAY [1..2] OF BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>62</IOffset>
-			<BitSize>80</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.iShownSequenceIndex</Name>
-			<Type>INT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>72</IOffset>
+			<IOffset>212</IOffset>
 			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.iPlayedSequenceIndex</Name>
-			<Type>INT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>74</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.xPlayedSequenceDone</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>76</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.xRaisingEdgeRedBtn</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>77</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.xRaisingEdgeGreenBtn</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>78</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.xRaisingEdgeYellowBtn</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>79</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.xRaisingEdgeWhiteBtn</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>80</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.fbDebounceRed</Name>
-			<Type Decoration="10054CD8">FB_Debounce</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>84</IOffset>
-			<BitSize>480</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.fbDebounceGreen</Name>
-			<Type Decoration="10054CD8">FB_Debounce</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>144</IOffset>
-			<BitSize>480</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.fbDebounceYellow</Name>
-			<Type Decoration="10054CD8">FB_Debounce</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>204</IOffset>
-			<BitSize>480</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.fbDebounceWhite</Name>
-			<Type Decoration="10054CD8">FB_Debounce</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>264</IOffset>
-			<BitSize>480</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.fbRisingTrigRedBtn</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>81</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.fbRisingTrigGreenBtn</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>324</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.fbRisingTrigYellowBtn</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>327</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.fbRisingTrigWhiteBtn</Name>
-			<Type Decoration="1003051C">R_TRIG</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>330</IOffset>
-			<BitSize>24</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.fbTimeoutTimer</Name>
-			<Type Decoration="10060D24">TON</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>336</IOffset>
-			<BitSize>192</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.xTimeoutTimerTrigger</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>333</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.xPlayerTimeoutOccured</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>334</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.xDebouncedRedBtn</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>335</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.xDebouncedGreenBtn</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>360</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.xDebouncedYellowBtn</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>361</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.xDebouncedWhiteBtn</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>362</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.counter</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>364</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.fbSequencePlayer</Name>
-			<Type Decoration="100DB165">FB_PlaySequence</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1308</IOffset>
-			<BitSize>480</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_Simon.fbPlayWon</Name>
-			<Type Decoration="10110122">FB_Simon_PlayWon</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>904</IOffset>
-			<BitSize>608</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">P_Helmets.c_uMotorSpeed</Name>
 			<Type>INT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>14</IOffset>
+			<IOffset>214</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">P_Helmets.c_uHelmetAcceleration</Name>
 			<Type>UINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>16</IOffset>
+			<IOffset>216</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">P_Helmets.c_uTargetPosition</Name>
 			<Type>UDINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>20</IOffset>
+			<IOffset>220</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">P_Helmets.c_auCorrectSequence</Name>
 			<Type Decoration="2001019C">ARRAY [1..4] OF UDINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1176</IOffset>
+			<IOffset>224</IOffset>
 			<BitSize>128</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">P_Helmets.c_uMotorSound</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>994</IOffset>
+			<IOffset>218</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">P_Helmets.c_uVolumeMotorHotel</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>995</IOffset>
+			<IOffset>219</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" TaskPrio="1">P_Helmets.c_uVolumeMotorSimon</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1076</IOffset>
+			<IOffset>240</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">P_Helmets.FB_GetHelmID</Name>
 			<Type Decoration="100F4E49">FB_GetHelmID</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>368</IOffset>
+			<IOffset>244</IOffset>
 			<BitSize>480</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">P_Helmets.c_auCurrentSequence</Name>
 			<Type Decoration="2001019C">ARRAY [1..4] OF UDINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1368</IOffset>
+			<IOffset>304</IOffset>
 			<BitSize>128</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">P_Helmets.uRecoveryState</Name>
 			<Type>UINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1174</IOffset>
+			<IOffset>242</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">P_Helmets.uOpeningState</Name>
 			<Type>UINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>18</IOffset>
+			<IOffset>320</IOffset>
 			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_aeCorrectSequence</Name>
+			<Type Decoration="20013904">ARRAY [1..5] OF E_SEQUENCEITEMS</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>322</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_iCorrectSequenceLength</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>332</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_tDebounceTime</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>336</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_tPlayerTimeoutTime</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>340</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_tLightOnPeriod</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>344</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_tLightOffPeriod</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>348</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_uSoundVolumeLeft</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>241</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_uSoundVolumeRight</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>334</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_uFinishedSound</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>335</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_uErrorSound</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>352</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_uRightSound</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>353</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_axFinalCode1</Name>
+			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>354</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_axFinalCode2</Name>
+			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>364</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_axFinalCode3</Name>
+			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>374</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Simon.c_tLightWonPeriod</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>384</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.eSimonState</Name>
+			<Type Decoration="300003AB">E_SimonState</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>388</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.aeResultLeds</Name>
+			<Type Decoration="20010142">ARRAY [1..10] OF BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>390</IOffset>
+			<BitSize>80</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.iShownSequenceIndex</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>400</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.iPlayedSequenceIndex</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>402</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xPlayedSequenceDone</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>404</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xRaisingEdgeRedBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>405</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xRaisingEdgeGreenBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>406</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xRaisingEdgeYellowBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>407</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xRaisingEdgeWhiteBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>408</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbDebounceRed</Name>
+			<Type Decoration="10054CD8">FB_Debounce</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>412</IOffset>
+			<BitSize>480</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbDebounceGreen</Name>
+			<Type Decoration="10054CD8">FB_Debounce</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>472</IOffset>
+			<BitSize>480</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbDebounceYellow</Name>
+			<Type Decoration="10054CD8">FB_Debounce</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>532</IOffset>
+			<BitSize>480</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbDebounceWhite</Name>
+			<Type Decoration="10054CD8">FB_Debounce</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>592</IOffset>
+			<BitSize>480</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbRisingTrigRedBtn</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>409</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbRisingTrigGreenBtn</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>652</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbRisingTrigYellowBtn</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>655</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbRisingTrigWhiteBtn</Name>
+			<Type Decoration="1003051C">R_TRIG</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>658</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbTimeoutTimer</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>664</IOffset>
+			<BitSize>192</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xTimeoutTimerTrigger</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>661</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xPlayerTimeoutOccured</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>662</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xDebouncedRedBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>663</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xDebouncedGreenBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>688</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xDebouncedYellowBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>689</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.xDebouncedWhiteBtn</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>690</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.counter</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>692</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbSequencePlayer</Name>
+			<Type Decoration="100DB165">FB_PlaySequence</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>696</IOffset>
+			<BitSize>480</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Simon.fbPlayWon</Name>
+			<Type Decoration="10110122">FB_Simon_PlayWon</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>756</IOffset>
+			<BitSize>608</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Valves.c_aeCorrectSequence</Name>
+			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>832</IOffset>
+			<BitSize>72</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Valves.c_aeInitialSequence</Name>
+			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>841</IOffset>
+			<BitSize>72</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1">P_Valves.c_iCorrectSequenceLength</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>694</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Valves.c_auFinalCode</Name>
+			<Type Decoration="20010157">ARRAY [1..4] OF UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>850</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Valves.c_uFinalCodeLength</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>858</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Valves.c_tWonPeriod</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>860</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_Valves.fbPlayWon</Name>
+			<Type Decoration="100A9473">FB_Valve_PlayWon</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>864</IOffset>
+			<BitSize>480</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.ADSLOG_MSGTYPE_HINT</Name>
 			<Type>DWORD</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1196</IOffset>
+			<IOffset>36</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.ADSLOG_MSGTYPE_WARN</Name>
 			<Type>DWORD</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1200</IOffset>
+			<IOffset>40</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.ADSLOG_MSGTYPE_ERROR</Name>
 			<Type>DWORD</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1204</IOffset>
+			<IOffset>44</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.ADSLOG_MSGTYPE_LOG</Name>
 			<Type>DWORD</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1208</IOffset>
+			<IOffset>48</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.ADSLOG_MSGTYPE_MSGBOX</Name>
 			<Type>DWORD</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1212</IOffset>
+			<IOffset>52</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.ADSLOG_MSGTYPE_RESOURCE</Name>
 			<Type>DWORD</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1216</IOffset>
+			<IOffset>56</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
@@ -4833,49 +4845,49 @@
 				<![CDATA[file operation constants]]>
 			</Comment>
 			<IGroup>16448</IGroup>
-			<IOffset>1220</IOffset>
+			<IOffset>60</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.FILE_OPENCREATE</Name>
 			<Type>DWORD</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1224</IOffset>
+			<IOffset>64</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.FILE_OPENREAD</Name>
 			<Type>DWORD</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1228</IOffset>
+			<IOffset>68</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.FILE_OPENWRITE</Name>
 			<Type>DWORD</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1232</IOffset>
+			<IOffset>72</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.FILE_READ</Name>
 			<Type>DWORD</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1236</IOffset>
+			<IOffset>76</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.FILE_WRITE</Name>
 			<Type>DWORD</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1240</IOffset>
+			<IOffset>80</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.FILE_SEEKBEGIN</Name>
 			<Type>DWORD</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1244</IOffset>
+			<IOffset>84</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
@@ -4885,35 +4897,35 @@
 				<![CDATA[boot data constants (-> SYSTEMINFOTYPE.bootDataFlags)]]>
 			</Comment>
 			<IGroup>16448</IGroup>
-			<IOffset>1248</IOffset>
+			<IOffset>88</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.BOOTDATAFLAGS_RETAIN_LOADED</Name>
 			<Type>BYTE</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>889</IOffset>
+			<IOffset>92</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.BOOTDATAFLAGS_RETAIN_INVALID</Name>
 			<Type>BYTE</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1173</IOffset>
+			<IOffset>93</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.BOOTDATAFLAGS_RETAIN_REQUESTED</Name>
 			<Type>BYTE</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1194</IOffset>
+			<IOffset>94</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.BOOTDATAFLAGS_PERSISTENT_LOADED</Name>
 			<Type>BYTE</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1195</IOffset>
+			<IOffset>95</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
@@ -4923,7 +4935,7 @@
 				<![CDATA[system state constants (-> SYSTEMINFOTYPE.systemStateFlags)]]>
 			</Comment>
 			<IGroup>16448</IGroup>
-			<IOffset>1252</IOffset>
+			<IOffset>96</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
@@ -4933,7 +4945,7 @@
 				<![CDATA[blue screen of death]]>
 			</Comment>
 			<IGroup>16448</IGroup>
-			<IOffset>1253</IOffset>
+			<IOffset>97</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
@@ -4943,21 +4955,21 @@
 				<![CDATA[realtime violation - latency time]]>
 			</Comment>
 			<IGroup>16448</IGroup>
-			<IOffset>1254</IOffset>
+			<IOffset>98</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">.g_eGameState</Name>
 			<Type Decoration="3000033F">E_GameState</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1168</IOffset>
+			<IOffset>962</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name>.g_xReadyToPlay</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1139</IOffset>
+			<IOffset>961</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
@@ -5005,17 +5017,46 @@
 			<BitSize>1152</BitSize>
 		</Symbol>
 		<Symbol>
+			<Name TaskPrio="1">.gat_xBerkReadyToPlay</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1343</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.gat_xBerkSolved</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1352</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">.gati_xBerkDoor</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">832</IOffset>
+			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 17 (EL1014)^Channel 1^doorBerk]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
 			<Name TaskPrio="1">.gat_xBreakerReadyToPlay</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1167</IOffset>
+			<IOffset>1353</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">.gat_xBrakerSolved</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>846</IOffset>
+			<IOffset>1354</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
@@ -5157,14 +5198,14 @@
 			<Name TaskPrio="1">.gat_xHelmetsReadyToPlay</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1170</IOffset>
+			<IOffset>1355</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">.gat_xHelmetsSolved</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>865</IOffset>
+			<IOffset>1356</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
@@ -5513,17 +5554,46 @@
 			</Properties>
 		</Symbol>
 		<Symbol>
+			<Name TaskPrio="1">.gat_xHotelDoorReadyToPlay</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1357</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">.gat_xHotelDoorSolved</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1358</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">.gati_xHotelDoor</Name>
+			<Type>BOOL</Type>
+			<IGroup>61473</IGroup>
+			<IOffset VarConfig="Changeable">833</IOffset>
+			<BitSize>1</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Périphérique 2 (EtherCAT (v2.10 only))^Term 11 (CX1100-0004)^Term 17 (EL1014)^Channel 2^doorHotel]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
 			<Name TaskPrio="1">.gat_xKeysReadyToPlay</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1171</IOffset>
+			<IOffset>1359</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">.gat_xKeysSolved</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>866</IOffset>
+			<IOffset>1360</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
@@ -5575,7 +5645,7 @@
 			<Name TaskPrio="1">.gat_xSimonSolved</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>877</IOffset>
+			<IOffset>1361</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
@@ -6294,14 +6364,14 @@
 			<Name TaskPrio="1">.gat_xValvesReadyToPlay</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1172</IOffset>
+			<IOffset>1362</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">.gat_xValveSolved</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>878</IOffset>
+			<IOffset>1363</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
