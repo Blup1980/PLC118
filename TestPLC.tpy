@@ -4,16 +4,16 @@
 	<ProjectInfo>
 		<Path>C:\Users\xavie\Documents\PLC118\TestPLC.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2022-07-19T19:48:26</ChangeDate>
+		<ChangeDate>2023-02-15T19:55:44</ChangeDate>
 		<Library>
 			<Name>PlcSystem.lib</Name>
 			<Path>C:\TwinCAT\Plc\Upload\PlcSystem.lib</Path>
-			<ChangeDate>2001-07-19T11:03:02</ChangeDate>
+			<ChangeDate>2001-07-19T10:03:02</ChangeDate>
 		</Library>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\Plc\Upload\STANDARD.LIB</Path>
-			<ChangeDate>1998-06-05T11:03:02</ChangeDate>
+			<ChangeDate>1998-06-05T10:03:02</ChangeDate>
 		</Library>
 	</ProjectInfo>
 	<RoutingInfo>
@@ -479,12 +479,162 @@
 			</FbInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="200101AA">ARRAY [0..6] OF USINT</Name>
+			<Name Decoration="20010140">ARRAY [1..8] OF BOOL</Name>
+			<Type>BOOL</Type>
+			<BitSize>64</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>8</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="2001013A">ARRAY [1..2] OF BOOL</Name>
+			<Type>BOOL</Type>
+			<BitSize>16</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>2</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="2001019C">ARRAY [1..4] OF UDINT</Name>
+			<Type>UDINT</Type>
+			<BitSize>128</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>4</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="300003AB" Crc32="3539295686" LastChange="2022-08-27T15:45:58">E_SimonState</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>E_off</Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_playing</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_readUserInput</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_won</Text>
+				<Enum>3</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="300003A4" Crc32="1593407785" LastChange="2022-07-19T19:27:08">E_SmokeState</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>E_PowerOff</Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_Heating</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_Smoking</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_WaitingDoor</Text>
+				<Enum>3</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_WaitingTimeout</Text>
+				<Enum>4</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_Done</Text>
+				<Enum>5</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="3000033F" Crc32="0413316750" LastChange="2022-04-25T18:14:32">E_GameState</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>E_GameStateRecovery</Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_GamePendingStart</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_GameStatePlaying</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_GameStateEnded</Text>
+				<Enum>3</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="300005DE" Crc32="2425580463" LastChange="2022-08-27T13:06:32">E_AmbianceSoundState</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>E_NoSound</Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_PlayingEntry</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_PlayingBeginning</Text>
+				<Enum>2</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_PlayingMiddle</Text>
+				<Enum>3</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>E_PlayingEnd</Text>
+				<Enum>4</Enum>
+			</EnumInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="200101AE">ARRAY [1..9] OF USINT</Name>
 			<Type>USINT</Type>
-			<BitSize>56</BitSize>
+			<BitSize>72</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>9</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="200101A8">ARRAY [1..3] OF USINT</Name>
+			<Type>USINT</Type>
+			<BitSize>24</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>3</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="200101AD">ARRAY [1..8] OF USINT</Name>
+			<Type>USINT</Type>
+			<BitSize>64</BitSize>
+			<ArrayInfo>
+				<LBound>1</LBound>
+				<Elements>8</Elements>
+			</ArrayInfo>
+		</DataType>
+		<DataType>
+			<Name Decoration="200101AB">ARRAY [0..7] OF USINT</Name>
+			<Type>USINT</Type>
+			<BitSize>64</BitSize>
 			<ArrayInfo>
 				<LBound>0</LBound>
-				<Elements>7</Elements>
+				<Elements>8</Elements>
 			</ArrayInfo>
 		</DataType>
 		<DataType>
@@ -497,12 +647,12 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="100A9473" Crc32="1923077786" LastChange="2022-04-25T18:14:32">FB_Valve_PlayWon</Name>
+			<Name Decoration="100A944D" Crc32="1742238113" LastChange="2023-02-15T19:55:42">FB_Valve_PlayWon</Name>
 			<BitSize>480</BitSize>
 			<SubItem>
 				<Name Constant="1">c_auFinalCode</Name>
-				<Type Decoration="200101AA">ARRAY [0..6] OF USINT</Type>
-				<BitSize>56</BitSize>
+				<Type Decoration="200101AB">ARRAY [0..7] OF USINT</Type>
+				<BitSize>64</BitSize>
 				<BitOffs>0</BitOffs>
 			</SubItem>
 			<SubItem>
@@ -563,109 +713,6 @@
 				<CodeIndex>112</CodeIndex>
 				<InitIndex>113</InitIndex>
 			</FbInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="20010140">ARRAY [1..8] OF BOOL</Name>
-			<Type>BOOL</Type>
-			<BitSize>64</BitSize>
-			<ArrayInfo>
-				<LBound>1</LBound>
-				<Elements>8</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="2001013A">ARRAY [1..2] OF BOOL</Name>
-			<Type>BOOL</Type>
-			<BitSize>16</BitSize>
-			<ArrayInfo>
-				<LBound>1</LBound>
-				<Elements>2</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="2001019C">ARRAY [1..4] OF UDINT</Name>
-			<Type>UDINT</Type>
-			<BitSize>128</BitSize>
-			<ArrayInfo>
-				<LBound>1</LBound>
-				<Elements>4</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="300003AB" Crc32="1319317223" LastChange="2022-04-25T18:14:32">E_SimonState</Name>
-			<Type>INT</Type>
-			<BitSize>16</BitSize>
-			<EnumInfo>
-				<Text>E_playing</Text>
-				<Enum>0</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>E_readUserInput</Text>
-				<Enum>1</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>E_won</Text>
-				<Enum>2</Enum>
-			</EnumInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="300003A4" Crc32="1593407785" LastChange="2022-07-19T19:27:08">E_SmokeState</Name>
-			<Type>INT</Type>
-			<BitSize>16</BitSize>
-			<EnumInfo>
-				<Text>E_PowerOff</Text>
-				<Enum>0</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>E_Heating</Text>
-				<Enum>1</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>E_Smoking</Text>
-				<Enum>2</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>E_WaitingDoor</Text>
-				<Enum>3</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>E_WaitingTimeout</Text>
-				<Enum>4</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>E_Done</Text>
-				<Enum>5</Enum>
-			</EnumInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="200101AE">ARRAY [1..9] OF USINT</Name>
-			<Type>USINT</Type>
-			<BitSize>72</BitSize>
-			<ArrayInfo>
-				<LBound>1</LBound>
-				<Elements>9</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="3000033F" Crc32="0413316750" LastChange="2022-04-25T18:14:32">E_GameState</Name>
-			<Type>INT</Type>
-			<BitSize>16</BitSize>
-			<EnumInfo>
-				<Text>E_GameStateRecovery</Text>
-				<Enum>0</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>E_GamePendingStart</Text>
-				<Enum>1</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>E_GameStatePlaying</Text>
-				<Enum>2</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>E_GameStateEnded</Text>
-				<Enum>3</Enum>
-			</EnumInfo>
 		</DataType>
 		<DataType>
 			<Name Decoration="20017954">ARRAY [1..4] OF SYSTEMTASKINFOTYPE</Name>
@@ -3939,7 +3986,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="100BF160" Crc32="2791963001" LastChange="2022-04-25T18:14:32">P_Helmets</Name>
+			<Name Decoration="100BF160" Crc32="0591974317" LastChange="2022-08-27T15:13:18">P_Helmets</Name>
 			<PrgInfo>
 				<CodeIndex>118</CodeIndex>
 				<Symbol>
@@ -3978,13 +4025,7 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="10000000" Crc32="3543364970" LastChange="2022-04-25T18:14:32">P_HotelDoor</Name>
-			<PrgInfo>
-				<CodeIndex>119</CodeIndex>
-			</PrgInfo>
-		</Program>
-		<Program>
-			<Name Decoration="102AF9ED" Crc32="0849849416" LastChange="2022-04-25T18:14:32">P_Simon</Name>
+			<Name Decoration="102AF9ED" Crc32="2430043440" LastChange="2022-08-27T15:54:49">P_Simon</Name>
 			<PrgInfo>
 				<CodeIndex>120</CodeIndex>
 				<Symbol>
@@ -4116,34 +4157,37 @@
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1007439B" Crc32="0213224092" LastChange="2022-04-25T18:14:32">P_Valves</Name>
+			<Name Decoration="1008785F" Crc32="3997523827" LastChange="2022-07-19T19:48:26">P_SmokeVentil</Name>
 			<PrgInfo>
-				<CodeIndex>121</CodeIndex>
+				<CodeIndex>170</CodeIndex>
 				<Symbol>
-					<Name>P_Valves.c_aeCorrectSequence</Name>
+					<Name>P_SmokeVentil.c_tTriggerPeriod</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_Valves.c_aeInitialSequence</Name>
+					<Name>P_SmokeVentil.c_tWaitPeriod</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_Valves.c_iCorrectSequenceLength</Name>
+					<Name>P_SmokeVentil.C_iSpeed</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_Valves.c_auFinalCode</Name>
+					<Name>P_SmokeVentil.e_SmokeState</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_Valves.c_uFinalCodeLength</Name>
+					<Name>P_SmokeVentil.tPeriod</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_Valves.c_tWonPeriod</Name>
+					<Name>P_SmokeVentil.fbTimer</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_Valves.fbPlayWon</Name>
+					<Name>P_SmokeVentil.xTimerTrigger</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_SmokeVentil.xTimeoutOccured</Name>
 				</Symbol>
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1016297E" Crc32="0681030211" LastChange="2022-07-19T19:15:49">MAIN</Name>
+			<Name Decoration="10131842" Crc32="3933415604" LastChange="2022-08-27T15:05:37">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>114</CodeIndex>
 				<Symbol>
@@ -4203,44 +4247,125 @@
 				<Symbol>
 					<Name>MAIN.fbSytemTime</Name>
 				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="100418D1" Crc32="0808225861" LastChange="2022-08-27T15:31:37">P_HotelDoor</Name>
+			<PrgInfo>
+				<CodeIndex>119</CodeIndex>
 				<Symbol>
-					<Name>MAIN.uAmbientMusic</Name>
+					<Name>P_HotelDoor.c_uDoorSound</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.uPlaylistIndex</Name>
+					<Name>P_HotelDoor.c_uVolumeDoorrHotel</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.xTriggerEndMusic</Name>
+					<Name>P_HotelDoor.c_uVolumeDoorSimon</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_HotelDoor.xSoundPlayed</Name>
 				</Symbol>
 			</PrgInfo>
 		</Program>
 		<Program>
-			<Name Decoration="1008785F" Crc32="3997523827" LastChange="2022-07-19T19:48:26">P_SmokeVentil</Name>
+			<Name Decoration="101737AF" Crc32="3400567061" LastChange="2022-08-27T15:26:17">P_AmbianceSound</Name>
 			<PrgInfo>
-				<CodeIndex>170</CodeIndex>
+				<CodeIndex>169</CodeIndex>
 				<Symbol>
-					<Name>P_SmokeVentil.c_tTriggerPeriod</Name>
+					<Name>P_AmbianceSound.c_uGameStartSound</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_SmokeVentil.c_tWaitPeriod</Name>
+					<Name>P_AmbianceSound.c_uGameStartVolumeSimon</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_SmokeVentil.C_iSpeed</Name>
+					<Name>P_AmbianceSound.c_uGameStartVolumeHotel</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_SmokeVentil.e_SmokeState</Name>
+					<Name>P_AmbianceSound.ca_uPlayListBeginning</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_SmokeVentil.tPeriod</Name>
+					<Name>P_AmbianceSound.ca_uPlayListBeginningVolumeSimon</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_SmokeVentil.fbTimer</Name>
+					<Name>P_AmbianceSound.ca_uPlayListBeginningVolumeHotel</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_SmokeVentil.xTimerTrigger</Name>
+					<Name>P_AmbianceSound.c_uPlayListBeginningLength</Name>
 				</Symbol>
 				<Symbol>
-					<Name>P_SmokeVentil.xTimeoutOccured</Name>
+					<Name>P_AmbianceSound.ca_uPlayListMiddle</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.ca_uPlayListMiddleVolumeSimon</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.ca_uPlayListMiddleVolumeHotel</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.c_uPlayListMiddleLength</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.c_uGameEndSound</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.c_uGameEndVolumeSimon</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.c_uGameEndVolumeHotel</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.c_uDispatchSound</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.c_uVolumeDispatch</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.itPeriod</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.e_oldGameState</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.e_soundState</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.e_oldSoundState</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.uAmbientMusic</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.uPlaylistIndex</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_AmbianceSound.e_old_soundState</Name>
+				</Symbol>
+			</PrgInfo>
+		</Program>
+		<Program>
+			<Name Decoration="10074375" Crc32="0213224092" LastChange="2022-04-25T18:14:32">P_Valves</Name>
+			<PrgInfo>
+				<CodeIndex>121</CodeIndex>
+				<Symbol>
+					<Name>P_Valves.c_aeCorrectSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Valves.c_aeInitialSequence</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Valves.c_iCorrectSequenceLength</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Valves.c_auFinalCode</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Valves.c_uFinalCodeLength</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Valves.c_tWonPeriod</Name>
+				</Symbol>
+				<Symbol>
+					<Name>P_Valves.fbPlayWon</Name>
 				</Symbol>
 			</PrgInfo>
 		</Program>
@@ -4653,98 +4778,105 @@
 			<BitSize>608</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Valves.c_aeCorrectSequence</Name>
-			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>832</IOffset>
-			<BitSize>72</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Valves.c_aeInitialSequence</Name>
-			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>841</IOffset>
-			<BitSize>72</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1">P_Valves.c_iCorrectSequenceLength</Name>
-			<Type>INT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>694</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Valves.c_auFinalCode</Name>
-			<Type Decoration="20010157">ARRAY [1..4] OF UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>850</IOffset>
-			<BitSize>64</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Valves.c_uFinalCodeLength</Name>
-			<Type>UINT</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>858</IOffset>
-			<BitSize>16</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_Valves.c_tWonPeriod</Name>
+			<Name Constant="1">P_SmokeVentil.c_tTriggerPeriod</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>860</IOffset>
+			<IOffset>1364</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">P_Valves.fbPlayWon</Name>
-			<Type Decoration="100A9473">FB_Valve_PlayWon</Type>
+			<Name Constant="1" TaskPrio="1">P_SmokeVentil.c_tWaitPeriod</Name>
+			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>864</IOffset>
-			<BitSize>480</BitSize>
+			<IOffset>1380</IOffset>
+			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">MAIN.ca_uPlayList</Name>
+			<Name Constant="1" TaskPrio="1">P_SmokeVentil.C_iSpeed</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1384</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_SmokeVentil.e_SmokeState</Name>
+			<Type Decoration="300003A4">E_SmokeState</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1372</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_SmokeVentil.tPeriod</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1388</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_SmokeVentil.fbTimer</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1460</IOffset>
+			<BitSize>192</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_SmokeVentil.xTimerTrigger</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1386</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_SmokeVentil.xTimeoutOccured</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1387</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1">MAIN.ca_uPlayList</Name>
 			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>99</IOffset>
 			<BitSize>72</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">MAIN.ca_uPlayListVolumeSimon</Name>
+			<Name Constant="1">MAIN.ca_uPlayListVolumeSimon</Name>
 			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>108</IOffset>
 			<BitSize>72</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">MAIN.ca_uPlayListVolumeHotel</Name>
+			<Name Constant="1">MAIN.ca_uPlayListVolumeHotel</Name>
 			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>117</IOffset>
 			<BitSize>72</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">MAIN.c_uPlayListLength</Name>
+			<Name Constant="1">MAIN.c_uPlayListLength</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>126</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">MAIN.c_uGameEndSound</Name>
+			<Name Constant="1">MAIN.c_uGameEndSound</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>127</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">MAIN.c_uGameEndVolumeSimon</Name>
+			<Name Constant="1">MAIN.c_uGameEndVolumeSimon</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>128</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">MAIN.c_uGameEndVolumeHotel</Name>
+			<Name Constant="1">MAIN.c_uGameEndVolumeHotel</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>129</IOffset>
@@ -4835,81 +4967,242 @@
 			<BitSize>64</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.uAmbientMusic</Name>
+			<Name Constant="1" TaskPrio="1">P_HotelDoor.c_uDoorSound</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>139</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.uPlaylistIndex</Name>
+			<Name Constant="1" TaskPrio="1">P_HotelDoor.c_uVolumeDoorrHotel</Name>
 			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>166</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.xTriggerEndMusic</Name>
-			<Type>BOOL</Type>
+			<Name Constant="1" TaskPrio="1">P_HotelDoor.c_uVolumeDoorSimon</Name>
+			<Type>USINT</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>167</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1">P_SmokeVentil.c_tTriggerPeriod</Name>
+			<Name TaskPrio="1">P_HotelDoor.xSoundPlayed</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1485</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.c_uGameStartSound</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1396</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.c_uGameStartVolumeSimon</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1397</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.c_uGameStartVolumeHotel</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1398</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.ca_uPlayListBeginning</Name>
+			<Type Decoration="200101A8">ARRAY [1..3] OF USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1399</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.ca_uPlayListBeginningVolumeSimon</Name>
+			<Type Decoration="200101A8">ARRAY [1..3] OF USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1402</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.ca_uPlayListBeginningVolumeHotel</Name>
+			<Type Decoration="200101A8">ARRAY [1..3] OF USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1405</IOffset>
+			<BitSize>24</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.c_uPlayListBeginningLength</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1408</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.ca_uPlayListMiddle</Name>
+			<Type Decoration="200101AD">ARRAY [1..8] OF USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1409</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.ca_uPlayListMiddleVolumeSimon</Name>
+			<Type Decoration="200101AD">ARRAY [1..8] OF USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1432</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.ca_uPlayListMiddleVolumeHotel</Name>
+			<Type Decoration="200101AD">ARRAY [1..8] OF USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1440</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.c_uPlayListMiddleLength</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1417</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.c_uGameEndSound</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1418</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.c_uGameEndVolumeSimon</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1419</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_AmbianceSound.c_uGameEndVolumeHotel</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1420</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1">P_AmbianceSound.c_uDispatchSound</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1421</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1">P_AmbianceSound.c_uVolumeDispatch</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1422</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1">P_AmbianceSound.itPeriod</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1364</IOffset>
+			<IOffset>1448</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_SmokeVentil.c_tWaitPeriod</Name>
-			<Type>TIME</Type>
+			<Name TaskPrio="1">P_AmbianceSound.e_oldGameState</Name>
+			<Type Decoration="3000033F">E_GameState</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1380</IOffset>
-			<BitSize>32</BitSize>
+			<IOffset>1452</IOffset>
+			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Constant="1" TaskPrio="1">P_SmokeVentil.C_iSpeed</Name>
+			<Name TaskPrio="1">P_AmbianceSound.e_soundState</Name>
+			<Type Decoration="300005DE">E_AmbianceSoundState</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1454</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_AmbianceSound.e_oldSoundState</Name>
+			<Type Decoration="300005DE">E_AmbianceSoundState</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1456</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_AmbianceSound.uAmbientMusic</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1423</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">P_AmbianceSound.uPlaylistIndex</Name>
+			<Type>USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1458</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>P_AmbianceSound.e_old_soundState</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>1484</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Valves.c_aeCorrectSequence</Name>
+			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>832</IOffset>
+			<BitSize>72</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Valves.c_aeInitialSequence</Name>
+			<Type Decoration="200101AE">ARRAY [1..9] OF USINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>841</IOffset>
+			<BitSize>72</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1">P_Valves.c_iCorrectSequenceLength</Name>
 			<Type>INT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1384</IOffset>
+			<IOffset>694</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">P_SmokeVentil.e_SmokeState</Name>
-			<Type Decoration="300003A4">E_SmokeState</Type>
+			<Name Constant="1" TaskPrio="1">P_Valves.c_auFinalCode</Name>
+			<Type Decoration="20010157">ARRAY [1..4] OF UINT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1372</IOffset>
+			<IOffset>850</IOffset>
+			<BitSize>64</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Constant="1" TaskPrio="1">P_Valves.c_uFinalCodeLength</Name>
+			<Type>UINT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>858</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">P_SmokeVentil.tPeriod</Name>
+			<Name Constant="1" TaskPrio="1">P_Valves.c_tWonPeriod</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1388</IOffset>
+			<IOffset>860</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">P_SmokeVentil.fbTimer</Name>
-			<Type Decoration="10060D24">TON</Type>
+			<Name TaskPrio="1">P_Valves.fbPlayWon</Name>
+			<Type Decoration="100A944D">FB_Valve_PlayWon</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>1460</IOffset>
-			<BitSize>192</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_SmokeVentil.xTimerTrigger</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1386</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">P_SmokeVentil.xTimeoutOccured</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>1387</IOffset>
-			<BitSize>8</BitSize>
+			<IOffset>864</IOffset>
+			<BitSize>480</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name Constant="1" IsDefinedInLibrary="1">.ADSLOG_MSGTYPE_HINT</Name>
